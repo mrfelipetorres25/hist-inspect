@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule-catalog>
+	<rule id="ypto" name="YPTO RULE" anomaly="GC" expression="LOC > 5"/>
+	<rule id="zpto" name="ZPTO RULE" anomaly="XPTO" expression="LOC > 5"/>
+	<rule id="wpto" name="WPTO RULE" anomaly="XPTO" expression="LOC > 5 || CBO > 2"/>
+</rule-catalog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="RuleCatalogFile"
+	xmlns:rule="RuleCatalogFile" elementFormDefault="qualified">
+	<element name="rule-catalog" type="rule:ruleCatalogType" />
+	<complexType name="ruleCatalogType">
+		<sequence>
+			<element name="rule" type="rule:ruleType" minOccurs="0"
+				maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	<complexType name="ruleType">
+		<simpleContent>
+			<extension base="string">
+			  	<attribute name="id" type="ID" use="required" />
+				<attribute name="name" type="string" use="required" />
+				<attribute name="anomaly" type="string" use="required" />
+				<attribute name="expression" type="string" use="required" />
+			</extension>
+		</simpleContent>
+	</complexType>
+</schema>
