@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>dslmetrics</artifactId>
+		<groupId>br.pucrio.dslmetrics</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>br.pucrio.dslmetrics</groupId>
+	<artifactId>dslmetrics-console</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>DSL Metrics Command Line Interface</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>xmlbeans-maven-plugin</artifactId>
+				<version>2.3.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>xmlbeans</goal>
+						</goals>
+					</execution>
+				</executions>
+				<inherited>true</inherited>
+				<configuration>
+					<sourceGenerationDirectory>src/main/java</sourceGenerationDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<artifactId>dslmetrics-core</artifactId>
+			<groupId>br.pucrio.dslmetrics</groupId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+	</dependencies>
+</project>

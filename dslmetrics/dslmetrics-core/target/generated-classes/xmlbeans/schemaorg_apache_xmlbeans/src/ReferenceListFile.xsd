@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="ReferenceListFile"
+	xmlns:ref="ReferenceListFile" elementFormDefault="qualified">
+
+	<element name="reference-list-catalog" type="ref:referenceListCatalogType" />
+
+	<complexType name="referenceListCatalogType">
+		<sequence>
+			<element name="anomaly" type="ref:anomalyType" minOccurs="1"
+				maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+
+	<complexType name="anomalyType">
+		<sequence>
+			<element name="version" type="ref:versionType" minOccurs="1"
+				maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="id" type="string" use="required"/>
+	</complexType>
+
+	<complexType name="versionType">
+		<sequence>
+			<element name="entity" type="string" minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="number" type="int" use="required"/>
+	</complexType>
+</schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="TogetherMtbl" xmlns="TogetherMtbl">
+	<xs:element name="MetricResults" type="MetricResultsType" />
+	<xs:complexType name="MetricDescriptionType">
+		<xs:sequence>
+			<xs:element type="MetricType" name="Metric" maxOccurs="unbounded"
+				minOccurs="0" />
+			<xs:element type="MetricDescriptionType" name="MetricDescription"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="containerName" use="optional" />
+		<xs:attribute type="xs:int" name="endOffset" use="optional" />
+		<xs:attribute type="xs:string" name="fqname" use="optional" />
+		<xs:attribute type="xs:int" name="kind" use="optional" />
+		<xs:attribute type="xs:string" name="language" use="optional" />
+		<xs:attribute type="xs:int" name="line" use="optional" />
+		<xs:attribute type="xs:string" name="location" use="optional" />
+		<xs:attribute type="xs:string" name="name" use="optional" />
+		<xs:attribute type="xs:int" name="offset" use="optional" />
+		<xs:attribute type="xs:string" name="projectName" use="optional" />
+		<xs:attribute type="xs:string" name="resource" use="optional" />
+		<xs:attribute type="xs:string" name="resourceName" use="optional" />
+		<xs:attribute type="xs:int" name="timestamp" use="optional" />
+	</xs:complexType>
+	<xs:complexType name="MetricType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute type="xs:string" name="name" use="optional" />
+				<xs:attribute type="xs:double" name="value" use="optional" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MetricResultsType">
+		<xs:sequence>
+			<xs:element type="MetricDescriptionType" name="MetricDescription"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="isComparation" />
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anomaly-catalog>
+	<anomaly id="GC" name="God Class" applyTo="class" />
+	<anomaly id="XPTO" name="Xpto Anomaly" applyTo="class,package,method,project" />
+	<anomaly id="DC" name="Divergent Change" applyTo="class" />
+</anomaly-catalog>
