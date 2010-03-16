@@ -27,7 +27,13 @@ public class ReferenceList {
 	}
 
 	public Set<Entity> getEntitiesForVersion(Version version) {
-		return Collections.unmodifiableSet(versionEntitiesMap.get(version));
+
+		Set<Entity> entities = versionEntitiesMap.get(version);
+
+		if (entities == null)
+			return Collections.emptySet();
+		else
+			return entities;
 	}
 
 	void setEntitiesWithAnomaly(Version v, Set<Entity> entities) {
@@ -44,11 +50,11 @@ public class ReferenceList {
 
 		return entities;
 	}
-	
+
 	public Set<Entry<Version, Set<Entity>>> getEntityAndVersions() {
 		return Collections.unmodifiableSet(versionEntitiesMap.entrySet());
 	}
-	
+
 	public Set<Version> getVersions() {
 		return Collections.unmodifiableSet(versionEntitiesMap.keySet());
 	}

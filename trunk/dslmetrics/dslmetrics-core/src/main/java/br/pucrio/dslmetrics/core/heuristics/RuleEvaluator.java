@@ -1,6 +1,8 @@
 package br.pucrio.dslmetrics.core.heuristics;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,7 @@ public class RuleEvaluator extends DomainVisitorAdapter {
 	private ScriptEngineManager manager = new ScriptEngineManager();
 	private ScriptEngine engine = manager.getEngineByName(SCRIPT_LANGUAGE);
 
-	private List<Detection> detections = new LinkedList<Detection>();
+	private Map<Rule, Detection> detections = new LinkedHashMap<Rule, Detection>();
 	private List<RuleEvaluationError> errors = new LinkedList<RuleEvaluationError>();
 
 	public RuleEvaluator(List<Rule> rules) {
@@ -74,8 +76,8 @@ public class RuleEvaluator extends DomainVisitorAdapter {
 								.getExpression(), bindings);
 
 						if (detected)
-							detections
-									.add(new Detection(version, entity, rule));
+							addDetection(rule, version, entity);
+						
 
 					} catch (ScriptException e) {
 						errors.add(new RuleEvaluationError(version, entity,
@@ -84,6 +86,17 @@ public class RuleEvaluator extends DomainVisitorAdapter {
 				}
 			}
 		}
+	}
+
+	private void addDetection(Rule rule, Version version, Entity entity) {
+		Detection detection = detections.get(rule);
+		
+		if(detection == null) {
+			detection = new Detection(rule);
+			detections.put(rule, detection);
+		}
+		
+		detection.addEntity(version, entity);
 	}
 
 	private Bindings createBindings(Entity entity, Version version) {
@@ -100,8 +113,8 @@ public class RuleEvaluator extends DomainVisitorAdapter {
 		return bindings;
 	}
 
-	public List<Detection> getDetections() {
-		return detections;
+	public Collection<Detection> getDetections() {
+		return detections.values();
 	}
 
 	public List<RuleEvaluationError> getErrors() {
