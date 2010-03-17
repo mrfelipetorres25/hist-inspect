@@ -1,4 +1,4 @@
-package br.pucrio.dslmetrics.core.heuristics;
+package br.pucrio.dslmetrics.core.rules;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -15,9 +15,9 @@ import javax.script.ScriptException;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Version;
-import br.pucrio.dslmetrics.core.domain.walker.DomainVisitorAdapter;
+import br.pucrio.dslmetrics.core.domain.walker.ProjectVisitorAdapter;
 
-public class RuleEvaluator extends DomainVisitorAdapter {
+public class RuleEvaluator extends ProjectVisitorAdapter {
 
 	private static final String SCRIPT_LANGUAGE = "JavaScript";
 

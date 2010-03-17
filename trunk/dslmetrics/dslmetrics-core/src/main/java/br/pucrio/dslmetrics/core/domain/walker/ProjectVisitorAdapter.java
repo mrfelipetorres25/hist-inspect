@@ -6,7 +6,7 @@ import br.pucrio.dslmetrics.core.domain.Method;
 import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 
-public class DomainVisitorAdapter implements DomainVisitor {
+public class ProjectVisitorAdapter implements ProjectVisitor {
 
 	@Override
 	public void acceptClass(Class clazz, int level) {

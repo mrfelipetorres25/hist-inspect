@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<title>Home</title>
+</head>
+
+<body>
+
+	<div id="wrap">
+		#set($pageName = "detections")
+		#parse("templates/delta/header.vm")		
+	
+		<div id="page">
+		
+			
+			<div id="main-content">
+			
+				<!-- begin main content -->
+                <h2>Relatório</h2>
+				
+				<p>
+					Selecione no menu lateral a regra que deseja ver mais detalhes.
+                </p>
+			
+				<!-- end main content -->
+				
+			</div>
+			
+			<div id="main-sidebar">
+			
+				<!-- being sidebar content -->
+						
+				<div class="sidebar-box">
+					<h4>Rules</h4>
+					<ul>
+						#foreach($detection in $report.Detections)
+						<li><a href="${detection.Rule.Id}.html" title="$detection.Rule.Name">$detection.Rule.Name</a></li>
+						#end
+					</ul>
+				</div>
+				
+				<!-- end sidebar content -->
+				
+			</div>
+			
+			<div class="clear"></div>
+			
+		</div>
+		
+
+		#parse("templates/delta/footer.vm")
+		#parse("templates/delta/page-end.vm")
+
+		
+	</div>
+
+</body>
+</html>

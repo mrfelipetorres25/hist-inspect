@@ -9,7 +9,7 @@ import java.util.Set;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.Version;
-import br.pucrio.dslmetrics.core.heuristics.Anomaly;
+import br.pucrio.dslmetrics.core.rules.Anomaly;
 
 public class ReferenceListCatalog {
 

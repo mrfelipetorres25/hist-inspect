@@ -1,4 +1,4 @@
-package br.pucrio.dslmetrics.core.heuristics;
+package br.pucrio.dslmetrics.core.rules;
 
 import javax.script.ScriptException;
 
@@ -33,7 +33,7 @@ public class RuleEvaluationError {
 		return entity;
 	}
 
-	public Rule getHeuristic() {
+	public Rule getRule() {
 		return heuristic;
 	}
 

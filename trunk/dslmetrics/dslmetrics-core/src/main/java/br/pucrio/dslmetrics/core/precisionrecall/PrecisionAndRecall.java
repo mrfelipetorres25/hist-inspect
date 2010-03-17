@@ -10,8 +10,8 @@ import java.util.SortedSet;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.Version;
-import br.pucrio.dslmetrics.core.heuristics.Detection;
-import br.pucrio.dslmetrics.core.heuristics.Rule;
+import br.pucrio.dslmetrics.core.rules.Detection;
+import br.pucrio.dslmetrics.core.rules.Rule;
 
 public class PrecisionAndRecall {
 

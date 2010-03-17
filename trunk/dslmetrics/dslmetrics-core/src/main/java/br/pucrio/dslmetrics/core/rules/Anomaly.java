@@ -1,4 +1,4 @@
-package br.pucrio.dslmetrics.core.heuristics;
+package br.pucrio.dslmetrics.core.rules;
 
 import java.util.Collections;
 import java.util.LinkedList;

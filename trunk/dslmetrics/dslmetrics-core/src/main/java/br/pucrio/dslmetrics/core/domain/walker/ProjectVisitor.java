@@ -6,7 +6,7 @@ import br.pucrio.dslmetrics.core.domain.Method;
 import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 
-public interface DomainVisitor {
+public interface ProjectVisitor {
 	
 	public void acceptEntity(Entity entity, int level);
 	

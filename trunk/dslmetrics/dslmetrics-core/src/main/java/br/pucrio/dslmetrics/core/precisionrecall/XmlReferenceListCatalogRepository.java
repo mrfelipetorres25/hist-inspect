@@ -13,12 +13,12 @@ import br.pucrio.dslmetrics.core.AbstractXmlRepository;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.Version;
-import br.pucrio.dslmetrics.core.heuristics.Anomaly;
-import br.pucrio.dslmetrics.core.heuristics.AnomalyRepository;
-import br.pucrio.dslmetrics.core.heuristics.XmlRepositoryException;
 import br.pucrio.dslmetrics.core.precisionrecall.parsers.referencelist.AnomalyType;
 import br.pucrio.dslmetrics.core.precisionrecall.parsers.referencelist.ReferenceListCatalogDocument;
 import br.pucrio.dslmetrics.core.precisionrecall.parsers.referencelist.VersionType;
+import br.pucrio.dslmetrics.core.rules.Anomaly;
+import br.pucrio.dslmetrics.core.rules.AnomalyRepository;
+import br.pucrio.dslmetrics.core.rules.XmlRepositoryException;
 
 public class XmlReferenceListCatalogRepository
 		extends
