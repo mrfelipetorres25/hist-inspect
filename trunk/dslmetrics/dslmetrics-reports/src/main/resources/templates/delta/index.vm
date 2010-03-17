@@ -8,17 +8,17 @@
 
 <body>
 
-	<div id="wrap">
 		#set($pageName = "detections")
 		#parse("templates/delta/header.vm")		
 	
 		<div id="page">
 		
+			#parse("templates/delta/side-bar-detections.vm")
 			
 			<div id="main-content">
 			
 				<!-- begin main content -->
-                <h2>Relatório</h2>
+                <h2>Detecções</h2>
 				
 				<p>
 					Selecione no menu lateral a regra que deseja ver mais detalhes.
@@ -27,33 +27,11 @@
 				<!-- end main content -->
 				
 			</div>
-			
-			<div id="main-sidebar">
-			
-				<!-- being sidebar content -->
 						
-				<div class="sidebar-box">
-					<h4>Rules</h4>
-					<ul>
-						#foreach($detection in $report.Detections)
-						<li><a href="${detection.Rule.Id}.html" title="$detection.Rule.Name">$detection.Rule.Name</a></li>
-						#end
-					</ul>
-				</div>
-				
-				<!-- end sidebar content -->
-				
-			</div>
-			
 			<div class="clear"></div>
 			
 		</div>
-		
-
-		#parse("templates/delta/footer.vm")
-		#parse("templates/delta/page-end.vm")
-
-		
+				
 	</div>
 
 </body>

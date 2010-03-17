@@ -24,6 +24,7 @@ public abstract class Report {
 
 	private VelocityEngine engine;
 	private VelocityContext context;
+	
 	private File currentTemplateDir;
 	private File outputDir;
 
@@ -35,7 +36,7 @@ public abstract class Report {
 	}
 
 	public void generateReport(File file) throws ResourceNotFoundException,
-			ParseErrorException, Exception {
+			ParseErrorException, ReportException, Exception {
 		evaluate();
 		writeReport(file);
 	}
@@ -96,7 +97,11 @@ public abstract class Report {
 		currentTemplateDir = new File(new File(templatesDir), templateName);
 	}
 
-	protected void processTemplate(String in, String out) throws IOException,
+	protected void processTemplate(String in, String out) throws IOException, Exception {
+		processTemplate(in, out, context);
+	}
+	
+	protected void processTemplate(String in, String out, VelocityContext context) throws IOException,
 			Exception {
 		BufferedWriter writer = null;
 		try {
@@ -105,7 +110,8 @@ public abstract class Report {
 
 			File currentTemplate = new File(currentTemplateDir, in);
 
-			Template t = engine.getTemplate(currentTemplate.getPath());
+			Template t = engine.getTemplate(currentTemplate.getPath(), "UTF-8");
+			
 			t.merge(context, writer);
 
 		} finally {
@@ -124,7 +130,15 @@ public abstract class Report {
 		context = new VelocityContext();
 		context.put("report", this);
 	}
+	
+	protected VelocityEngine getEngine() {
+		return engine;
+	}
 
+	protected VelocityContext getContext() {
+		return context;
+	}
+	
 	public String getTemplatesDir() {
 		return templatesDir;
 	}
@@ -149,5 +163,5 @@ public abstract class Report {
 
 	protected abstract void processTemplates() throws IOException, Exception;
 
-	protected abstract void evaluate();
+	protected abstract void evaluate() throws ReportException;
 }

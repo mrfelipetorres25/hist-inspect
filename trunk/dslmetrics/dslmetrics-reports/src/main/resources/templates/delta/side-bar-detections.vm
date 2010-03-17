@@ -1,0 +1,16 @@
+			<div id="main-sidebar">
+			
+				<!-- being sidebar content -->
+						
+				<div class="sidebar-box">
+					<h4>Rules</h4>
+					<ul>
+						#foreach($detection in $report.Detections)
+						<li><a href="detec-${detection.Rule.Id}.html" title="$detection.Rule.Name">$detection.Rule.Name</a></li>
+						#end
+					</ul>
+				</div>
+				
+				<!-- end sidebar content -->
+				
+			</div>

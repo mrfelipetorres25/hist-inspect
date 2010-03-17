@@ -57,17 +57,17 @@ public class PrecisionAndRecall {
 		int denominator = truePositiveValue + falseNegativeValue;
 
 		if (denominator != 0)
-			recallValue.put(version, truePositiveValue / (double) denominator);
+			recallValue.put(version, (double)truePositiveValue / (double) denominator);
 	}
 
 	private void calculatePrecision(Version version) {
 		int truePositiveValue = getTruePositives(version).size();
-		int falsePositiveValue = getFalseNegatives(version).size();
+		int falsePositiveValue = getFalsePositives(version).size();
 
 		int denominator = truePositiveValue + falsePositiveValue;
 
 		if (denominator != 0) {
-			precisionValue.put(version, truePositiveValue
+			precisionValue.put(version,(double) truePositiveValue
 					/ (double) denominator);
 		}
 	}
@@ -78,7 +78,7 @@ public class PrecisionAndRecall {
 		Set<Entity> truePositivesSet = new LinkedHashSet<Entity>();
 
 		for (Entity entity : detectedEntities) {
-			if (referenceEntities.contains(detectedEntities))
+			if (referenceEntities.contains(entity))
 				truePositivesSet.add(entity);
 		}
 
@@ -115,7 +115,7 @@ public class PrecisionAndRecall {
 		return Collections.unmodifiableSet(truePositives.get(version));
 	}
 
-	public Set<Entity> getTrueNegatives(Version version) {
+	public Set<Entity> getFalsePositives(Version version) {
 		return Collections.unmodifiableSet(falsePositive.get(version));
 	}
 
@@ -141,6 +141,10 @@ public class PrecisionAndRecall {
 
 	public Rule getRule() {
 		return detection.getRule();
+	}
+	
+	public SortedSet<Version> getVersions() {
+		return referenceList.getVersions();
 	}
 
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<title>Home</title>
+</head>
+
+<body>
+
+		#set($pageName = "precAndRec")
+		#parse("templates/delta/header.vm")		
+	
+		<div id="page">
+		
+			#parse("templates/delta/side-bar-precAndRec.vm")
+			
+			<div id="main-content">
+			
+				<!-- begin main content -->
+                <h2>Avaliação de $precAndRec.Detection.Rule.Name</h2>
+				
+				#foreach($version in $precAndRec.Versions)
+                    <h3>Versão $version.Number</h3>
+					
+					
+                    <h4>Verdadeiros Positivos</h4>
+					
+					<p>
+					<ul>
+					#foreach($entity in $precAndRec.getTruePositives($version))
+						<li>$entity.Name</li>
+					#end
+					</ul>
+					</p>
+					
+					<h4>Falsos Positivos</h4>
+
+					<p>
+					<ul>
+					#foreach($entity in $precAndRec.getFalsePositives($version))
+						<li>$entity.Name</li>
+					#end
+					</ul>
+					</p>
+					
+					<h4>Falsos Negativos</h4>
+					
+					<p>
+					<ul>
+					#foreach($entity in $precAndRec.getFalseNegatives($version))
+						<li>$entity.Name</li>
+					#end
+					</ul>
+					</p>
+				#end
+			
+				<h2>Precision and Recall de $precAndRec.Detection.Rule.Name</h2>
+				<!-- end main content -->
+				<table>
+				<tr>
+					<td>Version</td>
+					<td>Precision</td>
+					<td>Recall</td>
+                </tr>	
+				#foreach($version in $precAndRec.Versions)
+				<tr>
+					<td>$version.Number</td>
+					<td>$!precAndRec.getPrecision($version)</td>
+					<td>$!precAndRec.getRecall($version)</td>
+                </tr>
+				#end
+                </table> 
+				
+
+			</div>
+						
+			<div class="clear"></div>
+			
+		</div>
+				
+	</div>
+
+</body>
+</html>

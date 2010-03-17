@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Version;
@@ -41,11 +43,11 @@ public class Detection {
 		if(entities == null)
 			return Collections.emptySet(); 
 		else
-			return entities;
+			return Collections.unmodifiableSet(entities);
 	}
 
 	public Set<Version> getVersions() {
-		return versionEntityMap.keySet();
+		return new TreeSet<Version>(versionEntityMap.keySet()); 
 	}
 	
 	

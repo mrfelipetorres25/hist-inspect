@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.Map.Entry;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
@@ -55,7 +57,7 @@ public class ReferenceList {
 		return Collections.unmodifiableSet(versionEntitiesMap.entrySet());
 	}
 
-	public Set<Version> getVersions() {
-		return Collections.unmodifiableSet(versionEntitiesMap.keySet());
+	public SortedSet<Version> getVersions() {
+		return new TreeSet<Version>(versionEntitiesMap.keySet());
 	}
 }

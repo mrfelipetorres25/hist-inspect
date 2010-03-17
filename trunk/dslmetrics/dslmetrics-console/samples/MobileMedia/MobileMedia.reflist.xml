@@ -69,7 +69,7 @@
 		</version>
 		<version number="6">
 			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
-			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
 			<entity>ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen</entity>
 		</version>
 		<version number="7">
