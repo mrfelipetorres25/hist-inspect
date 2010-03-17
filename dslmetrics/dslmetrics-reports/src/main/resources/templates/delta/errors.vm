@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<title>Home</title>
+</head>
+
+<body>
+
+
+		#set($pageName = "errors")
+		#parse("templates/delta/header.vm")		
+	
+		<div id="page">
+		
+			
+			<div id="main-content" style="width:100%;">
+			
+				<!-- begin main content -->
+                <h2>Erros</h2>
+				
+				<ol>
+					#foreach($error in $report.Errors)
+					<li>Erro na regra "${error.Rule.Name}" ao avaliar entidade "${error.Entity.Name}" na versão "${error.Version.Number}": "${error.ScriptException.Message}"</li>
+					#end
+				</ol>
+			
+				<!-- end main content -->
+				
+			</div>
+			
+			<div class="clear"></div>
+			
+		</div>
+
+</body>
+</html>

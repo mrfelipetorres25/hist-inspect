@@ -71,12 +71,14 @@ public class RuleEvaluator extends ProjectVisitorAdapter {
 
 					Bindings bindings = createBindings(entity, version);
 
+					Detection detection = createOrRetrieveDetection(rule);
+					
 					try {
 						Boolean detected = (Boolean) engine.eval(rule
 								.getExpression(), bindings);
 
 						if (detected)
-							addDetection(rule, version, entity);
+							detection.addEntity(version, entity);
 						
 
 					} catch (ScriptException e) {
@@ -88,15 +90,15 @@ public class RuleEvaluator extends ProjectVisitorAdapter {
 		}
 	}
 
-	private void addDetection(Rule rule, Version version, Entity entity) {
+
+	private Detection createOrRetrieveDetection(Rule rule) {
 		Detection detection = detections.get(rule);
 		
 		if(detection == null) {
 			detection = new Detection(rule);
 			detections.put(rule, detection);
 		}
-		
-		detection.addEntity(version, entity);
+		return detection;
 	}
 
 	private Bindings createBindings(Entity entity, Version version) {

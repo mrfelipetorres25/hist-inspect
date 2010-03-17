@@ -22,7 +22,8 @@ import br.pucrio.dslmetrics.core.rules.XmlRepositoryException;
 
 public class XmlReferenceListCatalogRepository
 		extends
-		AbstractXmlRepository<ReferenceListCatalogDocument, ReferenceListCatalog> {
+		AbstractXmlRepository<ReferenceListCatalogDocument, ReferenceListCatalog>
+		implements ReferenceListCatalogRepository {
 
 	private ReferenceListCatalogDocument document;
 
@@ -41,10 +42,6 @@ public class XmlReferenceListCatalogRepository
 
 		document = createDocument();
 		createCatalog();
-	}
-
-	public ReferenceListCatalog getReferenceListCatalog() {
-		return catalog;
 	}
 
 	private void createCatalog() throws XmlRepositoryException {
@@ -130,6 +127,11 @@ public class XmlReferenceListCatalogRepository
 	protected boolean validateDocument(ReferenceListCatalogDocument document,
 			XmlOptions options) {
 		return document.validate(options);
+	}
+
+	@Override
+	public ReferenceListCatalog getCatalog() {
+		return catalog;
 	}
 
 }

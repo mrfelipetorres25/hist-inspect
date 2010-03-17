@@ -16,10 +16,8 @@ public interface CommandLineOptions {
 	@Option(longName = "versions-file", shortName = "v", description = "(Mandatory) Path to the file containing the versions of the system.")
 	String getVersionsFile();
 
-	@Option(longName = "reference-list", shortName = "r", description = "(Optional) Path to the file containing the reference list. ")
+	@Option(longName = "reference-list", shortName = "r", description = "(Mandatory) Path to the file containing the reference list. ")
 	String getReferenceListFile();
-
-	boolean isReferenceListFile();
 
 	@Option(helpRequest = true, description = "Displays this help.")
 	boolean getHelp();
