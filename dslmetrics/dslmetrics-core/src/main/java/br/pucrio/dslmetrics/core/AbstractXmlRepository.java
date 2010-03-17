@@ -11,7 +11,7 @@ import org.apache.xmlbeans.XmlError;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 
-import br.pucrio.dslmetrics.core.heuristics.XmlRepositoryException;
+import br.pucrio.dslmetrics.core.rules.XmlRepositoryException;
 
 public abstract class AbstractXmlRepository<T, U> {
 

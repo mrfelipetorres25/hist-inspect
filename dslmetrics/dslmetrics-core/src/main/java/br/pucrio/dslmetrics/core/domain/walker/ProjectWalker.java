@@ -11,21 +11,21 @@ import br.pucrio.dslmetrics.core.domain.Method;
 import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 
-public class DomainWalker {
+public class ProjectWalker {
 
-	private List<DomainVisitor> visitors = new LinkedList<DomainVisitor>();
+	private List<ProjectVisitor> visitors = new LinkedList<ProjectVisitor>();
 
 	private int level = 0;
 
-	public DomainWalker() {
+	public ProjectWalker() {
 
 	}
 	
-	public DomainWalker(Collection<DomainVisitor> visitors) {
+	public ProjectWalker(Collection<ProjectVisitor> visitors) {
 		this.visitors.addAll(visitors);
 	}
 	
-	public DomainWalker(DomainVisitor ... visitors) {
+	public ProjectWalker(ProjectVisitor ... visitors) {
 		this.visitors.addAll(Arrays.asList(visitors));
 	}
 
@@ -33,7 +33,7 @@ public class DomainWalker {
 
 		level = 0;
 
-		for (DomainVisitor visitor : visitors) {
+		for (ProjectVisitor visitor : visitors) {
 			visitor.acceptEntity(project, level);
 			visitor.acceptProject(project, level);
 		}
@@ -49,7 +49,7 @@ public class DomainWalker {
 
 		level++;
 
-		for (DomainVisitor visitor : visitors) {
+		for (ProjectVisitor visitor : visitors) {
 			visitor.acceptEntity(c, level);
 			visitor.acceptClass(c, level);
 		}
@@ -67,7 +67,7 @@ public class DomainWalker {
 
 		level++;
 
-		for (DomainVisitor visitor : visitors) {
+		for (ProjectVisitor visitor : visitors) {
 			visitor.acceptEntity(p, level);
 			visitor.acceptPackage(p, level);
 		}
@@ -84,7 +84,7 @@ public class DomainWalker {
 	private void visitMethod(Method method) {
 		level++;
 
-		for (DomainVisitor visitor : visitors) {
+		for (ProjectVisitor visitor : visitors) {
 			visitor.acceptEntity(method, level);
 			visitor.acceptMethod(method, level);
 		}
@@ -92,7 +92,7 @@ public class DomainWalker {
 		level--;
 	}
 
-	public boolean addVisitor(DomainVisitor e) {
+	public boolean addVisitor(ProjectVisitor e) {
 		return visitors.add(e);
 	}
 
@@ -104,7 +104,7 @@ public class DomainWalker {
 		visitors.clear();
 	}
 
-	public List<DomainVisitor> getVisitors() {
+	public List<ProjectVisitor> getVisitors() {
 		return Collections.unmodifiableList(visitors);
 	}
 }

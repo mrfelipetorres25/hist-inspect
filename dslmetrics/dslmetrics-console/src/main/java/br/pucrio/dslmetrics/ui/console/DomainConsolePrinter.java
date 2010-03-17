@@ -1,9 +1,9 @@
 package br.pucrio.dslmetrics.ui.console;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.domain.walker.DomainVisitorAdapter;
+import br.pucrio.dslmetrics.core.domain.walker.ProjectVisitorAdapter;
 
-public class DomainConsolePrinter extends DomainVisitorAdapter {
+public class DomainConsolePrinter extends ProjectVisitorAdapter {
 
 	@Override
 	public void acceptEntity(Entity entity, int level) {

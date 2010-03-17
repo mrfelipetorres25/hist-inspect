@@ -9,6 +9,7 @@
 	<modules>
 		<module>dslmetrics-core</module>
 		<module>dslmetrics-console</module>
+		<module>dslmetrics-reports</module>
 	</modules>
 	<build>
 		<plugins>
