@@ -14,6 +14,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
+import br.pucrio.dslmetrics.core.domain.Metric;
 import br.pucrio.dslmetrics.core.domain.Version;
 import br.pucrio.dslmetrics.core.domain.walker.ProjectVisitorAdapter;
 
@@ -104,14 +105,20 @@ public class RuleEvaluator extends ProjectVisitorAdapter {
 	private Bindings createBindings(Entity entity, Version version) {
 
 		Bindings bindings = engine.createBindings();
-
-		SortedSet<String> metricNames = entity.getMetricNames();
-
+		
+		List<Metric> metrics = entity.getMetrics();
+		for (Metric metric : metrics) {
+			Double metricValue = entity.getMetricValue(version, metric);
+			bindings.put(metric.getMetricName(), metricValue);
+		}
+		
+		/*SortedSet<String> metricNames = entity.getMetricNames();
+		
 		for (String metricName : metricNames) {
 			Double metricValue = entity.getMetricValue(version, metricName);
 			bindings.put(metricName, metricValue);
-		}
-
+		}*/
+		
 		return bindings;
 	}
 
