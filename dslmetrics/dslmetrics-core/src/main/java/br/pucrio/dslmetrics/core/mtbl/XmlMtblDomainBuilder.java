@@ -22,6 +22,7 @@ import org.apache.xmlbeans.XmlOptions;
 import br.pucrio.dslmetrics.core.domain.Class;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Method;
+import br.pucrio.dslmetrics.core.domain.Metric;
 import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.ProjectBuilder;
@@ -326,7 +327,10 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 	private void populateMetrics(MetricType[] mtblMetrics, Entity entity,
 			Version version) {
 
-		Map<String, Double> metricsMap = new HashMap<String, Double>();
+		//Map<String, Double> metricsMap = new HashMap<String, Double>();
+		Map<Metric, Double> metricsMap = new HashMap<Metric, Double>();
+		//List<Metric> metricList = new ArrayList<Metric>();
+		
 
 		for (MetricType metricType : mtblMetrics) {
 			String metricName = metricType.getName();
@@ -336,8 +340,10 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 
 			if (split.length == 2)
 				metricName = split[1];
+			
+			Metric metric = new ConventionalMtblMetric(metricName);
 
-			metricsMap.put(metricName, metricValue);
+			metricsMap.put(metric, metricValue);
 		}
 
 		entity.setMetrics(version, metricsMap);
