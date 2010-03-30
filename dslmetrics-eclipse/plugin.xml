@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
-   <extension
-         point="org.eclipse.ui.importWizards">
-      <category
-            id="br.pucrio.dslmetrics.ui.eclipse.wizards.importversions.sampleCategory"
-            name="DSL Metrics">
-      </category>
-      <wizard
-            category="br.pucrio.dslmetrics.ui.eclipse.wizards.importversions.sampleCategory"
-            class="br.pucrio.dslmetrics.ui.eclipse.wizards.importversions.ImportVersionsWizard"
-            icon="icons/sample.gif"
-            id="br.pucrio.dslmetrics.ui.eclipse.wizards.importversions.ImportVersionsWizard"
-            name="Import System Versions">
-         <description>
-            Import a file from the local file system into the workspace.
-         </description>
-      </wizard>
-   </extension>
 
 </plugin>
