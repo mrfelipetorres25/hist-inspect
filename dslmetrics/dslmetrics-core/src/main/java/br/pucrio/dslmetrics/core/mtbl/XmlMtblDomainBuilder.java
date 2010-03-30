@@ -341,7 +341,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 			if (split.length == 2)
 				metricName = split[1];
 			
-			Metric metric = new ConventionalMtblMetric(metricName);
+			Metric metric = new CalculatedMetric(metricName);
 
 			metricsMap.put(metric, metricValue);
 		}

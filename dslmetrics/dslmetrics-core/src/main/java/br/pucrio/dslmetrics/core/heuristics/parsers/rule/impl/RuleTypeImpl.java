@@ -272,6 +272,18 @@ public class RuleTypeImpl extends org.apache.xmlbeans.impl.values.JavaStringHold
     }
     
     /**
+     * True if has "expression" attribute
+     */
+    public boolean isSetExpression()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().find_attribute_user(EXPRESSION$6) != null;
+        }
+    }
+    
+    /**
      * Sets the "expression" attribute
      */
     public void setExpression(java.lang.String expression)
@@ -304,6 +316,18 @@ public class RuleTypeImpl extends org.apache.xmlbeans.impl.values.JavaStringHold
                 target = (org.apache.xmlbeans.XmlString)get_store().add_attribute_user(EXPRESSION$6);
             }
             target.set(expression);
+        }
+    }
+    
+    /**
+     * Unsets the "expression" attribute
+     */
+    public void unsetExpression()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_attribute(EXPRESSION$6);
         }
     }
 }

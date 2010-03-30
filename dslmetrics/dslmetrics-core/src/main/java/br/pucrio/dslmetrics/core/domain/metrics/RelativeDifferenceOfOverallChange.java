@@ -14,8 +14,8 @@ public class RelativeDifferenceOfOverallChange extends
 	public RelativeDifferenceOfOverallChange() {
 	}
 	
-	public RelativeDifferenceOfOverallChange(Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private RelativeDifferenceOfOverallChange(Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public class RelativeDifferenceOfOverallChange extends
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }

@@ -9,7 +9,7 @@ import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.Version;
 
-public class TimeLife implements HistorySensitiveMetric {
+public class TimeLife implements NonCalculatedMetric {
 
 	public static final String NAME = "TL";
 	

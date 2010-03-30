@@ -16,7 +16,7 @@ package br.pucrio.dslmetrics.core.precisionrecall.parsers.referencelist;
 public interface VersionType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(VersionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC3948D75461ED98A4AC7327C9206E3EB").resolveHandle("versiontype312etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(VersionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s030C4636EDC6D9163E90E28F4FE3C275").resolveHandle("versiontype312etype");
     
     /**
      * Gets array of all "entity" elements

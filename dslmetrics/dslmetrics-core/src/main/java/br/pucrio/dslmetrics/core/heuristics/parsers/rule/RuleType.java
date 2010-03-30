@@ -16,7 +16,7 @@ package br.pucrio.dslmetrics.core.heuristics.parsers.rule;
 public interface RuleType extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(RuleType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC3948D75461ED98A4AC7327C9206E3EB").resolveHandle("ruletype4ff8type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(RuleType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s030C4636EDC6D9163E90E28F4FE3C275").resolveHandle("ruletype4ff8type");
     
     /**
      * Gets the "id" attribute
@@ -89,6 +89,11 @@ public interface RuleType extends org.apache.xmlbeans.XmlString
     org.apache.xmlbeans.XmlString xgetExpression();
     
     /**
+     * True if has "expression" attribute
+     */
+    boolean isSetExpression();
+    
+    /**
      * Sets the "expression" attribute
      */
     void setExpression(java.lang.String expression);
@@ -97,6 +102,11 @@ public interface RuleType extends org.apache.xmlbeans.XmlString
      * Sets (as xml) the "expression" attribute
      */
     void xsetExpression(org.apache.xmlbeans.XmlString expression);
+    
+    /**
+     * Unsets the "expression" attribute
+     */
+    void unsetExpression();
     
     /**
      * A factory class with static methods for creating instances

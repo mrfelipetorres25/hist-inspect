@@ -14,8 +14,8 @@ public class AbsoluteDifferenceOfOverallChange extends
 	public AbsoluteDifferenceOfOverallChange() {
 	}
 	
-	public AbsoluteDifferenceOfOverallChange(Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private AbsoluteDifferenceOfOverallChange(Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class AbsoluteDifferenceOfOverallChange extends
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 	@Override

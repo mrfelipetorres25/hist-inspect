@@ -13,8 +13,8 @@ public class GeneralPercentageDecrease extends ChangeHistorySensitiveMetric {
 	public GeneralPercentageDecrease() {
 	}
 	
-	public GeneralPercentageDecrease(Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private GeneralPercentageDecrease(Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 	
 	@Override
@@ -58,7 +58,7 @@ public class GeneralPercentageDecrease extends ChangeHistorySensitiveMetric {
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }
