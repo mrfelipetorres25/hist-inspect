@@ -7,7 +7,15 @@ import br.pucrio.dslmetrics.core.domain.Metric;
 
 public abstract class ChangeHistorySensitiveMetric implements HistorySensitiveMetric {
 
-	protected Metric conventionalMetric;
+	private final Metric conventionalMetric;
+	
+	public ChangeHistorySensitiveMetric() {
+		this.conventionalMetric = null;
+	}
+	
+	public ChangeHistorySensitiveMetric(Metric conventionalMetric) {
+		this.conventionalMetric = conventionalMetric;
+	}
 	
 	@Override
 	public void calculateMetricValue(Entity entity) {
@@ -20,16 +28,15 @@ public abstract class ChangeHistorySensitiveMetric implements HistorySensitiveMe
 	}
 
 	@Override
-	public Class<?>[] getAppliedEntities() {
-		return conventionalMetric.getAppliedEntities();
-	}
-
-	@Override
 	public abstract String getMetricName();
 	
 	public abstract void calculateOneInstanceOfHistoryMetric(Entity entity,
 			Metric conventionalMetric);
+
+	public Metric getConventionalMetric() {
+		return conventionalMetric;
+	}
 	
-	public abstract String getGeneralName();
+
 
 }

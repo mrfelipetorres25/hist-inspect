@@ -13,8 +13,8 @@ public class RecentPercentageIncrease extends ChangeHistorySensitiveMetric {
 	public RecentPercentageIncrease() {
 	}
 	
-	public RecentPercentageIncrease (Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private RecentPercentageIncrease (Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 	
 	
@@ -57,7 +57,7 @@ public class RecentPercentageIncrease extends ChangeHistorySensitiveMetric {
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }

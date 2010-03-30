@@ -14,7 +14,8 @@ import br.pucrio.dslmetrics.core.heuristics.parsers.rule.RuleCatalogDocument;
 import br.pucrio.dslmetrics.core.heuristics.parsers.rule.RuleType;
 
 public class XmlRuleRepository extends
-		AbstractXmlRepository<RuleCatalogDocument, Rule> implements RuleRepository {
+		AbstractXmlRepository<RuleCatalogDocument, Rule> implements
+		RuleRepository {
 
 	private final AnomalyRepository anomalyRepository;
 
@@ -30,21 +31,36 @@ public class XmlRuleRepository extends
 		return new ArrayList<Rule>(identityMap.values());
 	}
 
-
 	private void createRules(RuleCatalogDocument document)
 			throws XmlRepositoryException {
 		RuleType[] rules = document.getRuleCatalog().getRuleArray();
-	
+
 		for (RuleType ruleType : rules) {
-	
+
 			Anomaly anomaly = getAnomaly(ruleType);
-	
-			Rule rule = new Rule(ruleType.getId(), ruleType.getName(), ruleType
-					.getExpression(), anomaly);
+
+			Rule rule = new Rule(ruleType.getId(), ruleType.getName(),
+					getRuleExpression(ruleType), anomaly);
 			anomaly.addRule(rule);
-	
+
 			identityMap.put(rule.getId(), rule);
 		}
+	}
+
+	private String getRuleExpression(RuleType ruleType)
+			throws XmlRepositoryException {
+
+		String expression = ruleType.getExpression();
+
+		if (expression == null)
+			expression = ruleType.getStringValue();
+
+		if (expression == null)
+			throw new XmlRepositoryException(MessageFormat.format(
+					"Expression for rule with id \"{0}\" was not specified.",
+					ruleType.getId()), ruleType, file);
+
+		return expression;
 	}
 
 	private Anomaly getAnomaly(RuleType ruleType) throws XmlRepositoryException {
@@ -54,7 +70,7 @@ public class XmlRuleRepository extends
 			throw new XmlRepositoryException(MessageFormat
 					.format("Anomaly with id \"{0}\" not found.", ruleType
 							.getAnomaly()), ruleType, file);
-	
+
 		return anomaly;
 	}
 

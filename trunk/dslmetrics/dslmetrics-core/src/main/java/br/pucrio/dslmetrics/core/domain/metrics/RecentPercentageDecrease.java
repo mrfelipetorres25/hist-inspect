@@ -13,8 +13,8 @@ private final String GENERAL_NAME = "rpd";
 	public RecentPercentageDecrease() {
 	}
 	
-	public RecentPercentageDecrease (Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private RecentPercentageDecrease (Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 	
 	@Override
@@ -58,7 +58,7 @@ private final String GENERAL_NAME = "rpd";
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }

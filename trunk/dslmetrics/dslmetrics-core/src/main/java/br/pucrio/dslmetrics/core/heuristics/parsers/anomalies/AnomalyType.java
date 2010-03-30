@@ -16,7 +16,7 @@ package br.pucrio.dslmetrics.core.heuristics.parsers.anomalies;
 public interface AnomalyType extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AnomalyType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC3948D75461ED98A4AC7327C9206E3EB").resolveHandle("anomalytype49a0type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AnomalyType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s030C4636EDC6D9163E90E28F4FE3C275").resolveHandle("anomalytype49a0type");
     
     /**
      * Gets the "id" attribute

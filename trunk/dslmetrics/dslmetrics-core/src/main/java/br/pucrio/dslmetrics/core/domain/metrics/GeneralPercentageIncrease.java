@@ -13,8 +13,8 @@ public class GeneralPercentageIncrease extends ChangeHistorySensitiveMetric {
 	public GeneralPercentageIncrease() {
 	}
 	
-	public GeneralPercentageIncrease (Metric conventionalMetricParameter) {
-		conventionalMetric = conventionalMetricParameter;
+	private GeneralPercentageIncrease (Metric conventionalMetricParameter) {
+		super(conventionalMetricParameter);
 	}
 	
 	@Override
@@ -38,7 +38,7 @@ public class GeneralPercentageIncrease extends ChangeHistorySensitiveMetric {
 			
 			if(diff > 0){
 				
-				Metric histMetric = new GeneralPercentageDecrease(conventionalMetric);
+				Metric histMetric = new GeneralPercentageIncrease(conventionalMetric);
 				
 				Double returnValue = (diff / firstMetricValue) * 100;
 				
@@ -57,7 +57,7 @@ public class GeneralPercentageIncrease extends ChangeHistorySensitiveMetric {
 
 	@Override
 	public String getMetricName() {
-		return GENERAL_NAME + conventionalMetric.getMetricName();
+		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }

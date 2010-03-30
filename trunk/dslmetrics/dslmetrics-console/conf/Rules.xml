@@ -3,4 +3,11 @@
 	<rule id="ypto" name="YPTO RULE" anomaly="GC" expression="LOC == 244 || LOC == 56"/>
 	<rule id="zpto" name="ZPTO RULE" anomaly="DC" expression="LOC > 5"/>
 	<rule id="wpto" name="WPTO RULE" anomaly="DC" expression="LOC > 5 || CBO > 2"/>
+
+	<rule id="Marinescu_2006_GC" name="MARINESCU 2006 - GC" anomaly="GC" expression="AID &gt; 4 &amp;&amp; WMPC1 >= 47 &amp;&amp; TCC &lt; 33"/>
+	<rule id="Marinescu_2006_FE" name="MARINESCU 2006 - FE" anomaly="GC">
+		<![CDATA[AID > 4 && WMPC1 >= 47 && NIC <= 4]]>
+	</rule>
+	
+	
 </rule-catalog>

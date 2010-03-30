@@ -1,53 +1,30 @@
 package br.pucrio.dslmetrics.core.domain;
 
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import br.pucrio.dslmetrics.core.domain.metrics.AccumulatedLOC;
+import br.pucrio.dslmetrics.core.domain.metrics.NonCalculatedMetric;
 
 public class ProjectReader {
 
 	private ProjectBuilder builder;
 
-	private Map<java.lang.Class<?>, List<Metric>> entitiesMetricMap = new HashMap<java.lang.Class<?>, List<Metric>>();
+	private NonCalculatedMetric [] metrics;
 
 	public ProjectReader(ProjectBuilder builder) {
 		this.builder = builder;
 
-		Metric[] metrics = createMetrics();
-		classifyMetrics(metrics);
+		metrics = createMetrics();
+
 	}
 
-	private Metric[] createMetrics() {
-		return new Metric[] { new AccumulatedLOC() };
-	}
-
-	private void classifyMetrics(Metric[] metrics) {
-		for (Metric metric : metrics) {
-
-			java.lang.Class<?>[] appliedEntities = metric.getAppliedEntities();
-
-			for (java.lang.Class<?> c : appliedEntities) {
-
-				List<Metric> classifiedMetrics = entitiesMetricMap.get(c);
-
-				if (classifiedMetrics == null) {
-					classifiedMetrics = new LinkedList<Metric>();
-					entitiesMetricMap.put(c, classifiedMetrics);
-				}
-
-				classifiedMetrics.add(metric);
-			}
-		}
+	private NonCalculatedMetric [] createMetrics() {
+		return new NonCalculatedMetric [] { new AccumulatedLOC() };
 	}
 
 	private void applyMetrics(Entity entity) {
-		List<Metric> metrics = entitiesMetricMap.get(entity.getClass());
-
-		for (Metric metric : metrics)
+		for (NonCalculatedMetric metric : metrics)
 			metric.calculateMetricValue(entity);
 	}
 

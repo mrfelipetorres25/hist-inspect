@@ -1,10 +1,7 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import br.pucrio.dslmetrics.core.domain.Metric;
+public interface HistorySensitiveMetric extends NonCalculatedMetric {
 
-/*
- * Interface para todas as métricas sensíveis à história
- */
-public interface HistorySensitiveMetric extends Metric {
-
+	public abstract String getGeneralName();
+	
 }

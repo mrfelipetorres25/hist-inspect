@@ -16,7 +16,7 @@ package br.pucrio.dslmetrics.core.mtbl.parsers.mtblfile;
 public interface MetricDescriptionType extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MetricDescriptionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC3948D75461ED98A4AC7327C9206E3EB").resolveHandle("metricdescriptiontype4a6etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MetricDescriptionType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s030C4636EDC6D9163E90E28F4FE3C275").resolveHandle("metricdescriptiontype4a6etype");
     
     /**
      * Gets array of all "Metric" elements

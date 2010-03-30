@@ -14,7 +14,7 @@
 			  	<attribute name="id" type="ID" use="required" />
 				<attribute name="name" type="string" use="required" />
 				<attribute name="anomaly" type="string" use="required" />
-				<attribute name="expression" type="string" use="required" />
+				<attribute name="expression" type="string" use="optional" />
 			</extension>
 		</simpleContent>
 	</complexType>
