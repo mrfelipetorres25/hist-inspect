@@ -19,6 +19,8 @@ public class Entity {
 	private String name;
 	
 	private String fullQualifiedName;
+	
+	private Entity parent = null;
 
 	private Map<Version, Map<Metric, Double>> versionMetricMap = new HashMap<Version, Map<Metric, Double>>();
 	
@@ -43,6 +45,14 @@ public class Entity {
 
 	public String getFullQualifiedName() {
 		return fullQualifiedName;
+	}
+	
+	protected void setParent(Entity parent) {
+		this.parent = parent;
+	}
+
+	public Entity getParent() {
+		return parent;
 	}
 	
 	public SortedSet<Version> getVersions() {
@@ -193,6 +203,4 @@ public class Entity {
 
 		return Collections.unmodifiableSet(allEntities);
 	}
-
-
 }

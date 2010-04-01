@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="br.pucrio.dlsmetrics.ui.eclipse.menu.main"
+               label="Detect-St">
+            <command
+                  commandId="br.pucrio.dslmetrics.ui.eclipse.commands.ShowImportVersionsFileWizardCommand"
+                  label="Load from Versions File..."
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="br.pucrio.dslmetrics.ui.eclipse.wizard.importversions.ShowImportVersionsFileWizardHandler"
+            id="br.pucrio.dslmetrics.ui.eclipse.commands.ShowImportVersionsFileWizardCommand"
+            name="LoadFromVersionsFile">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="br.pucrio.dslmetrics.ui.perspective.DetectStPerspective"
+            id="br.pucrio.dslmetrics.ui.perspective"
+            name="Detect-St">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="br.pucrio.dlsmetrics.ui.eclipse.view.category"
+            class="br.pucrio.dlsmetrics.ui.eclipse.views.metrics.MetricsViewPart"
+            icon="icons/sample.gif"
+            id="br.pucrio.dlsmetrics.ui.eclipse.views.metrics.MetricsViewPart"
+            name="Metrics View"
+            restorable="true">
+      </view>
+      <category
+            id="br.pucrio.dlsmetrics.ui.eclipse.view.category"
+            name="Detec-St">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               closeable="true"
+               id="br.pucrio.dlsmetrics.ui.eclipse.views.metrics.MetricsViewPart"
+               minimized="false"
+               moveable="true"
+               ratio="0.95f"
+               relationship="stack"
+               relative="org.eclipse.ui.editorss"
+               showTitle="true"
+               standalone="true"
+               visible="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
 
 </plugin>
