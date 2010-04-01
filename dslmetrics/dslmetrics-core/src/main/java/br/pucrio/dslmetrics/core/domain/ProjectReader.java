@@ -1,6 +1,5 @@
 package br.pucrio.dslmetrics.core.domain;
 
-import java.util.List;
 import java.util.Set;
 
 import br.pucrio.dslmetrics.core.domain.metrics.AccumulatedLOC;
@@ -32,8 +31,8 @@ public class ProjectReader {
 
 		Project project = builder.buildProject();
 
-		buildClasses(project.getClassesOfAllVersions());
-		buildPackages(project.getPackagesOfAllVersions());
+		buildClasses(project, project.getClassesOfAllVersions());
+		buildPackages(project, project.getPackagesOfAllVersions());
 
 		applyMetrics(project);
 		
@@ -42,38 +41,44 @@ public class ProjectReader {
 		return project;
 	}
 
-	private void buildClasses(Set<Class> allClasses)
+	private void buildClasses(Entity parent, Set<Class> allClasses)
 			throws ProjectBuilderException {
 
 		for (Class c : allClasses) {
 			builder.buildClass(c);
+			
+			c.setParent(parent);
 
-			buildClasses(c.getClassesOfAllVersions());
-			buildMethods(c.getMethodsOfAllVersions());
+			buildClasses(c,c.getClassesOfAllVersions());
+			buildMethods(c,c.getMethodsOfAllVersions());
 
 			applyMetrics(c);
 		}
 	}
 
-	private void buildMethods(Set<Method> allMethods)
+	private void buildMethods(Entity parent, Set<Method> allMethods)
 			throws ProjectBuilderException {
 
 		for (Method method : allMethods) {
 
+			method.setParent(parent);
+			
 			builder.buildMethod(method);
 			applyMetrics(method);
 		}
 	}
 
-	private void buildPackages(Set<Package> allPackages)
+	private void buildPackages(Entity parent, Set<Package> allPackages)
 			throws ProjectBuilderException {
 
 		for (Package p : allPackages) {
 
 			builder.buildPackage(p);
+			
+			p.setParent(parent);
 
-			buildClasses(p.getClassesOfAllVersions());
-			buildPackages(p.getPackagesOfAllVersions());
+			buildClasses(p, p.getClassesOfAllVersions());
+			buildPackages(p, p.getPackagesOfAllVersions());
 
 			applyMetrics(p);
 		}
