@@ -4,6 +4,6 @@
 	<version number="3" name="Mobile Media v. 3" ref="MobileMedia_v03.mtbl" />
 	<version number="4" name="Mobile Media v. 4" ref="MobileMedia_v04.mtbl" />
 	<version number="5" name="Mobile Media v. 5" ref="MobileMedia_v05.mtbl" />
-	<version number="6" name="Mobile Media v. 6" ref="MobileMedia_v06.mtbl" />
+	<version number="6" name="Mobile Media v. 6" ref="MobileMedia_v06.mtbl"  />
 	<version number="7" name="Mobile Media v. 7" ref="MobileMedia_v07.mtbl" />
 </versions>

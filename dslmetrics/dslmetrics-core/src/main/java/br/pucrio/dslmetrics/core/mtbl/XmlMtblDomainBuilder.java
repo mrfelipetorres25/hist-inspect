@@ -75,7 +75,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 
 	public interface EntityCreator<T extends Entity> {
 
-		public T newEntity(String fqname);
+		public T newEntity(String name, String fullQualifiedName);
 
 		public boolean isCorrectInstance(Entity entity);
 
@@ -233,8 +233,8 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 					}
 
 					@Override
-					public Package newEntity(String fqname) {
-						return new Package(fqname);
+					public Package newEntity(String name, String fullQualifiedName) {
+						return new Package(name,fullQualifiedName);
 					}
 				});
 	}
@@ -246,8 +246,8 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 				new EntityCreator<Class>() {
 
 					@Override
-					public Class newEntity(String fqname) {
-						return new Class(fqname);
+					public Class newEntity(String name, String fullQualifiedName) {
+						return new Class(name,fullQualifiedName);
 					}
 
 					@Override
@@ -268,8 +268,8 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 			}
 
 			@Override
-			public Method newEntity(String fqname) {
-				return new Method(fqname);
+			public Method newEntity(String name, String fullQualifiedName) {
+				return new Method(name,fullQualifiedName);
 			}
 		});
 
@@ -314,7 +314,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 			MetricDescriptionType metricDescriptionType, List<T> entities,
 			Version version, EntityCreator<T> creator) {
 
-		T childEntity = creator.newEntity(metricDescriptionType.getFqname());
+		T childEntity = creator.newEntity(metricDescriptionType.getName(), metricDescriptionType.getFqname());
 		entities.add(childEntity);
 		identityMap.put(childEntity.getName(), childEntity);
 
@@ -386,7 +386,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 					mtblFile, metricResults);
 
 			if (project == null)
-				project = new Project(mtblProject.getFqname());
+				project = new Project(mtblProject.getName(),mtblProject.getFqname());
 
 			new PackageChildrenPopulator().populateChildren(mtblProject
 					.getMetricDescriptionArray(), project, version);

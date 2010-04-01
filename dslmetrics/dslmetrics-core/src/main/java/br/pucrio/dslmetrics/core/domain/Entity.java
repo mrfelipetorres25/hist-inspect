@@ -17,10 +17,18 @@ import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 public class Entity {
 
 	private String name;
+	
+	private String fullQualifiedName;
 
 	private Map<Version, Map<Metric, Double>> versionMetricMap = new HashMap<Version, Map<Metric, Double>>();
 	
 
+	public Entity(String name, String fullQualifiedName) {
+		setName(name);
+		setFullQualifiedName(fullQualifiedName);
+	}
+		
+	
 	public String getName() {
 		return name;
 	}
@@ -29,6 +37,14 @@ public class Entity {
 		this.name = name;
 	}
 
+	protected void setFullQualifiedName(String fullQualifiedName) {
+		this.fullQualifiedName = fullQualifiedName;
+	}
+
+	public String getFullQualifiedName() {
+		return fullQualifiedName;
+	}
+	
 	public SortedSet<Version> getVersions() {
 		SortedSet<Version> ret = new TreeSet<Version>();
 		ret.addAll(versionMetricMap.keySet());
@@ -177,4 +193,6 @@ public class Entity {
 
 		return Collections.unmodifiableSet(allEntities);
 	}
+
+
 }
