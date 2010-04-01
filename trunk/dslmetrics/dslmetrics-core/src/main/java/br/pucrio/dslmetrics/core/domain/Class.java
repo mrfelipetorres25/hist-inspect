@@ -13,8 +13,8 @@ public class Class extends Entity {
 	
 	private Map<Version, List<Class>> classes = new HashMap<Version, List<Class>>();
 
-	public Class(String name) {
-		setName(name);
+	public Class(String name, String fullQualifiedName) {
+		super(name,fullQualifiedName);
 	}
 	
 	public List<Method> getMethods(Version version) {

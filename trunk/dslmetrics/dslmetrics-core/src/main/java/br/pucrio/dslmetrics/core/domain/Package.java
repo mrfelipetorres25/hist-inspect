@@ -12,8 +12,8 @@ public class Package extends Entity {
 
 	private Map<Version, List<Package>> packages = new HashMap<Version, List<Package>>();
 
-	public Package(String name) {
-		setName(name);
+	public Package(String name, String fullQualifiedName) {
+		super(name, fullQualifiedName);
 	}
 	
 	public List<Class> getClasses(Version version) {

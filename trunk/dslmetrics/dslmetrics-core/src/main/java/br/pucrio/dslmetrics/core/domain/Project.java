@@ -9,8 +9,8 @@ public class Project extends Package {
 	
 	private Map<String,Entity> allProjectEntitiesMap;
 	
-	public Project(String name) {
-		super(name);
+	public Project(String name, String fullQualifiedName) {
+		super(name, fullQualifiedName);
 	}
 	
 	void setAlltEntities(Map<String,Entity> allProjectEntities) {
