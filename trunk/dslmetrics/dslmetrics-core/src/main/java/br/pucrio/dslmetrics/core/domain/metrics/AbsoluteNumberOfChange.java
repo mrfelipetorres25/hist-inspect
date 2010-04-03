@@ -1,60 +1,45 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import java.util.SortedSet;
-
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.domain.Metric;
-import br.pucrio.dslmetrics.core.domain.Version;
-
+import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
 
 public class AbsoluteNumberOfChange extends ChangeHistorySensitiveMetric {
-	
-	private final String GENERAL_NAME = "anc";
 
-	public AbsoluteNumberOfChange() {
-	}
-	
-	private AbsoluteNumberOfChange(Metric conventionalMetricParameter) {
-		super(conventionalMetricParameter);
-	}
+	public static final String GENERAL_NICKNAME = "anc";
+	public final String GENERAL_NAME = "Absolute Number of Change";
+	private int numberOfChange;
 
-	public void calculateOneInstanceOfHistoryMetric(Entity entity, Metric conventionalMetric) {
-		int numberOfchange = 0;
-		
-		SortedSet<Version> versions = entity.getVersions();
-		
-		Version previousVersion = null;
-		if(!versions.isEmpty() && versions!=null){
-			previousVersion = versions.first();
-		}
-
-		
-		for (Version version : versions) {
-			
-			Double previousMetricValue = entity.getMetricValue(previousVersion, conventionalMetric);
-			Double actualMetricValue = entity.getMetricValue(version, conventionalMetric);
-			
-			if (actualMetricValue.compareTo(previousMetricValue)!=0){
-				numberOfchange++;
-			}
-			
-			Metric histMetric = new AbsoluteNumberOfChange(conventionalMetric);
-			Double metricValue = new Double(((double)numberOfchange));
-			
-			entity.addMetricValue(version, histMetric, metricValue);
-			
-			previousVersion = version;
-		}
-		
-	}
-	
-	public String getMetricName() {
-		return GENERAL_NAME + getConventionalMetric().getMetricName();
+	public AbsoluteNumberOfChange(calculatedMetric conventionalMetric) {
+		super(conventionalMetric);
 	}
 
 	@Override
 	public String getGeneralName() {
 		return GENERAL_NAME;
+	}
+
+	@Override
+	public String getGeneralNickname() {
+		return GENERAL_NICKNAME;
+	}
+
+	@Override
+	protected void onNewEntity(Entity entity) {
+		numberOfChange = 0;
+	}
+	
+	@Override
+	protected Double calculateMetricValueForOneVersion(
+			Double firstVersionMetricValue, Double previousMetricValue,
+			Double currentMetricValue) {
+
+		if (previousMetricValue == null || currentMetricValue == null)
+			return null;
+
+		if (!previousMetricValue.equals(currentMetricValue))
+			numberOfChange++;
+
+		return (double) numberOfChange;
 	}
 
 }

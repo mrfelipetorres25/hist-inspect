@@ -1,63 +1,39 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import java.util.SortedSet;
-
-import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.domain.Metric;
-import br.pucrio.dslmetrics.core.domain.Version;
+import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
 
 public class GeneralPercentageIncrease extends ChangeHistorySensitiveMetric {
 
-	private final String GENERAL_NAME = "gpi";
-	
-	public GeneralPercentageIncrease() {
+	private static final String GENERAL_NAME = "General Percentage Increase";
+	private final String GENERAL_NICKNAME = "gpi";
+
+	public GeneralPercentageIncrease(calculatedMetric conventionalMetric) {
+		super(conventionalMetric);
 	}
-	
-	private GeneralPercentageIncrease (Metric conventionalMetricParameter) {
-		super(conventionalMetricParameter);
-	}
-	
+
 	@Override
-	public void calculateOneInstanceOfHistoryMetric(Entity entity,
-			Metric conventionalMetric) {
-		
-		SortedSet<Version> versions = entity.getVersions();
-		
-		Version firstVersion = null;
-		if(!versions.isEmpty() && versions!=null){
-			firstVersion = versions.first();
-		}
+	protected Double calculateMetricValueForOneVersion(Double firstMetricValue,
+			Double previousMetricValue, Double currentMetricValue) {
 
-		Double firstMetricValue = entity.getMetricValue(firstVersion, conventionalMetric);
-		
-		for (Version version : versions) {
+		if (currentMetricValue == null || firstMetricValue == null)
+			return null;
 
-			Double actualMetricValue = entity.getMetricValue(version, conventionalMetric);
-			
-			Double diff = actualMetricValue - firstMetricValue;
-			
-			if(diff > 0){
-				
-				Metric histMetric = new GeneralPercentageIncrease(conventionalMetric);
-				
-				Double returnValue = (diff / firstMetricValue) * 100;
-				
-				entity.addMetricValue(version, histMetric, returnValue);
-				
-			}
-			
-		}
+		Double diff = currentMetricValue - firstMetricValue;
 
+		if (diff > 0)
+			return (Math.abs(diff) / firstMetricValue) * 100.0;
+		else
+			return 0.0;
+	}
+
+	@Override
+	public String getGeneralNickname() {
+		return GENERAL_NICKNAME;
 	}
 
 	@Override
 	public String getGeneralName() {
 		return GENERAL_NAME;
-	}
-
-	@Override
-	public String getMetricName() {
-		return GENERAL_NAME + getConventionalMetric().getMetricName();
 	}
 
 }

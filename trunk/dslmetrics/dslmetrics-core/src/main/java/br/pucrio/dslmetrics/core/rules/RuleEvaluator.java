@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.SortedSet;
 
 import javax.script.Bindings;
@@ -14,8 +15,8 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.domain.Metric;
 import br.pucrio.dslmetrics.core.domain.Version;
+import br.pucrio.dslmetrics.core.domain.metrics.Metric;
 import br.pucrio.dslmetrics.core.domain.walker.ProjectVisitorAdapter;
 
 public class RuleEvaluator extends ProjectVisitorAdapter {
@@ -106,18 +107,11 @@ public class RuleEvaluator extends ProjectVisitorAdapter {
 
 		Bindings bindings = engine.createBindings();
 		
-		List<Metric> metrics = entity.getMetrics();
+		Set<Metric> metrics = entity.getMetrics();
 		for (Metric metric : metrics) {
 			Double metricValue = entity.getMetricValue(version, metric);
-			bindings.put(metric.getMetricName(), metricValue);
+			bindings.put(metric.getNickname(), metricValue);
 		}
-		
-		/*SortedSet<String> metricNames = entity.getMetricNames();
-		
-		for (String metricName : metricNames) {
-			Double metricValue = entity.getMetricValue(version, metricName);
-			bindings.put(metricName, metricValue);
-		}*/
 		
 		return bindings;
 	}
