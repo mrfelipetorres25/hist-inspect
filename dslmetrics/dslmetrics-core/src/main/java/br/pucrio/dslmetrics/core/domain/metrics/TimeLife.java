@@ -2,16 +2,13 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 
 import java.util.SortedSet;
 
-import br.pucrio.dslmetrics.core.domain.Class;
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.domain.Method;
-import br.pucrio.dslmetrics.core.domain.Package;
-import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.Version;
 
-public class TimeLife implements NonCalculatedMetric {
+public class TimeLife implements HistorySensitiveMetric {
 
-	public static final String NAME = "TL";
+	public static final String NICK_NAME = "TL";
+	public static final String NAME = "Time Life";
 	
 	public void calculateMetricValue(Entity entity) {
 
@@ -27,13 +24,13 @@ public class TimeLife implements NonCalculatedMetric {
 		
 	}
 
-	public java.lang.Class<?>[] getAppliedEntities() {
-		return new java.lang.Class<?>[] { Project.class, Package.class,
-				Class.class, Method.class };
+	@Override
+	public String getNickname() {
+		return NICK_NAME;
 	}
 
 	@Override
-	public String getMetricName() {
+	public String getName() {
 		return NAME;
 	}
 

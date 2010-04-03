@@ -2,7 +2,6 @@ package br.pucrio.dslmetrics.core.domain;
 
 import java.util.Set;
 
-import br.pucrio.dslmetrics.core.domain.metrics.AccumulatedLOC;
 import br.pucrio.dslmetrics.core.domain.metrics.NonCalculatedMetric;
 
 public class ProjectReader {
@@ -19,7 +18,7 @@ public class ProjectReader {
 	}
 
 	private NonCalculatedMetric [] createMetrics() {
-		return new NonCalculatedMetric [] { new AccumulatedLOC() };
+		return new NonCalculatedMetric [] { };
 	}
 
 	private void applyMetrics(Entity entity) {

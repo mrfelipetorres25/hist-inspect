@@ -22,12 +22,13 @@ import org.apache.xmlbeans.XmlOptions;
 import br.pucrio.dslmetrics.core.domain.Class;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Method;
-import br.pucrio.dslmetrics.core.domain.Metric;
 import br.pucrio.dslmetrics.core.domain.Package;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.ProjectBuilder;
 import br.pucrio.dslmetrics.core.domain.ProjectBuilderException;
 import br.pucrio.dslmetrics.core.domain.Version;
+import br.pucrio.dslmetrics.core.domain.metrics.Metric;
+import br.pucrio.dslmetrics.core.domain.metrics.MetricsRepository;
 import br.pucrio.dslmetrics.core.mtbl.parsers.mtblfile.MetricDescriptionType;
 import br.pucrio.dslmetrics.core.mtbl.parsers.mtblfile.MetricResultsDocument;
 import br.pucrio.dslmetrics.core.mtbl.parsers.mtblfile.MetricResultsType;
@@ -174,6 +175,8 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 	private URI baseURI;
 
 	private String filename;
+
+	private MetricsRepository metricsRepository = MetricsRepository.getInstance();
 
 	public XmlMtblDomainBuilder(String filename) throws ProjectBuilderException {
 		this.filename = filename;
@@ -327,10 +330,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 	private void populateMetrics(MetricType[] mtblMetrics, Entity entity,
 			Version version) {
 
-		//Map<String, Double> metricsMap = new HashMap<String, Double>();
-		Map<Metric, Double> metricsMap = new HashMap<Metric, Double>();
-		//List<Metric> metricList = new ArrayList<Metric>();
-		
+		Map<Metric, Double> metricsMap = new HashMap<Metric, Double>();		
 
 		for (MetricType metricType : mtblMetrics) {
 			String metricName = metricType.getName();
@@ -341,7 +341,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 			if (split.length == 2)
 				metricName = split[1];
 			
-			Metric metric = new CalculatedMetric(metricName);
+			Metric metric = metricsRepository.getMetricByNickname(metricName);
 
 			metricsMap.put(metric, metricValue);
 		}

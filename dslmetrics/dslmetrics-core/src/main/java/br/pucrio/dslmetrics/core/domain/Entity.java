@@ -1,8 +1,7 @@
 package br.pucrio.dslmetrics.core.domain;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.Map.Entry;
 
-import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
+import br.pucrio.dslmetrics.core.domain.metrics.Metric;
 
 public class Entity {
 
@@ -84,71 +83,18 @@ public class Entity {
 		return versionMetricMap.put(version, metricsMap);
 	}
 	
-	public SortedSet<String> getMetricNames() {
-		SortedSet<String> metricNames = new TreeSet<String>();
+	public Set<Metric> getMetrics() {
 		
-		Set<Entry<Version, Map<Metric, Double>>> entrySet = versionMetricMap.entrySet();
+		Set<Metric> metrics = new HashSet<Metric>();
 		
-		for (Entry<Version, Map<Metric, Double>> entry : entrySet){
-			
-			Set<Metric> keySet = entry.getValue().keySet();
-			
-			for (Metric metric : keySet) {
-				metricNames.add(metric.getMetricName());;
-			}
-		}
-			
-			
+		Collection<Map<Metric, Double>> values = versionMetricMap.values();
 		
-		return metricNames;
+		for (Map<Metric, Double> map : values)
+			metrics.addAll(map.keySet());
+	
+		return metrics;
 	}
 	
-	public List<Metric> getMetrics() {
-		
-		List<Metric> metricList = new ArrayList<Metric>();
-		
-		Set<Entry<Version, Map<Metric, Double>>> entrySet = versionMetricMap.entrySet();
-		
-		for (Entry<Version, Map<Metric, Double>> entry : entrySet) {
-			
-			Map<Metric, Double> valueMap = entry.getValue();
-			
-			metricList.addAll(valueMap.keySet());
-
-		}
-		
-		Collections.sort(metricList, new Comparator<Metric>(){
-
-			@Override
-			public int compare(Metric m1, Metric m2) {
-				
-		       return (m1.getMetricName().compareTo(m2.getMetricName()));
-			}
-			
-		
-		
-		});
-		
-		return metricList;
-	}
-	
-	
-	public List<Metric> getConventionalMetrics() {		
-		
-		List<Metric> conventionaMetricList = new ArrayList<Metric>();
-		
-		List<Metric> metrics = getMetrics();
-		
-		for (Metric metric : metrics) {
-			if(metric instanceof CalculatedMetric){
-				conventionaMetricList.add(metric);
-			}
-			
-		}
-		return conventionaMetricList;
-	}
-	
-	//public void addMetricValue(Version version, String metricName, Double value) {
 	public void addMetricValue(Version version, Metric metric, Double value) {
 		Map<Metric, Double> map = versionMetricMap.get(version);
 
@@ -156,43 +102,28 @@ public class Entity {
 			map.put(metric, value);
 	}
 
-	//public Double getMetricValue(Version version, String metric) {
 	public Double getMetricValue(Version version, Metric metric) {
-		//Map<String, Double> metricValueMap = versionMetricMap.get(version);
 		Map<Metric, Double> metricValueMap = versionMetricMap.get(version);
 		
-		if (metricValueMap != null){
-			Set<Entry<Metric, Double>> metricValueEntrySet = metricValueMap.entrySet();
-			for (Entry<Metric, Double> metricValue : metricValueEntrySet) {
-				if(metricValue.getKey().getMetricName().compareTo(metric.getMetricName()) == 0){
-					return metricValue.getValue();
-				}
-				
-			}
-		}
-
-		return null;
+		if (metricValueMap != null)
+			return metricValueMap.get(metric);
+		else
+			return null;
 	}
 	
-	//
-	public Double getMetricValueByName(Version version, String metricName) {
-		Map<Metric, Double> metricValueMap = versionMetricMap.get(version);
-		
-		if (metricValueMap != null){
-			Set<Entry<Metric, Double>> metricValueEntrySet = metricValueMap.entrySet();
-			for (Entry<Metric, Double> metricValue : metricValueEntrySet) {
-				if(metricValue.getKey().getMetricName().compareTo(metricName) == 0){
-					return metricValue.getValue();
-				}
-				
-			}
-		}
-			
-		return null;
-	}
-	//
-	
-	
+//	public Double getMetricValueByName(Version version, String metricName) {
+//		Map<Metric, Double> metricValueMap = versionMetricMap.get(version);
+//		
+//		if (metricValueMap != null){
+//			Set<Metric> metrics = metricValueMap.keySet();
+//			for (Metric metric : metrics) 
+//				if(metric.getName().equals(metricName))
+//					return metricValueMap.get(metric);
+//			
+//		}
+//			
+//		return null;
+//	}
 
 	protected <T extends Entity> Set<T> getEntitiesOfAllVersions(
 			Map<Version, List<T>> entities) {
