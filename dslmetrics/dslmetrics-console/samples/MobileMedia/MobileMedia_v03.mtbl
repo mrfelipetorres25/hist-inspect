@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MetricResults isComparation="false">
 <MetricDescription containerName="" endOffset="-1" fqname="&lt;project&gt;" kind="0" language="java" line="-1" location="::Mobile Media03_OO" name="Mobile Media03_OO" offset="-1" projectName="Mobile Media03_OO" resourceName="Mobile Media03_OO" timestamp="-1">
-<Metric name="Metric:NCC" value="7"/>
+<Metric name="Metric:NCPC" value="7"/>
 <Metric name="Metric:HPVoc" value="726"/>
 <Metric name="Metric:TRAp" value="38"/>
 <Metric name="Metric:NOO" value="94"/>
 <Metric name="Metric:NOLV" value="161"/>
 <Metric name="Metric:NOM" value="84"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="17"/>
+<Metric name="Metric:NCC" value="17"/>
 <Metric name="Metric:LCOM3" value="665"/>
 <Metric name="Metric:RFC" value="853"/>
 <Metric name="Metric:DOIH" value="62"/>
@@ -99,7 +99,7 @@
 <Metric name="Metric:NOLV" value="7"/>
 <Metric name="Metric:NOM" value="10"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="2"/>
+<Metric name="Metric:NCC" value="2"/>
 <Metric name="Metric:LCOM3" value="309"/>
 <Metric name="Metric:RFC" value="311"/>
 <Metric name="Metric:DOIH" value="22"/>
@@ -178,7 +178,7 @@
 <Metric name="Metric:HEff" value="18307"/>
 <Metric name="Metric:NOAM" value="10"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="832" fqname="ubc.midp.mobilephoto.core.ui.screens.AddPhotoToAlbum" kind="2" language="java" line="7" location="ubc.midp.mobilephoto.core.ui.screens:AddPhotoToAlbum:AddPhotoToAlbum.java" name="AddPhotoToAlbum" offset="176" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\AddPhotoToAlbum.java" resourceName="AddPhotoToAlbum.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="26"/>
 <Metric name="Metric:NOO" value="2"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -306,7 +306,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="1568" fqname="ubc.midp.mobilephoto.core.ui.screens.NewLabelScreen" kind="2" language="java" line="14" location="ubc.midp.mobilephoto.core.ui.screens:NewLabelScreen:NewLabelScreen.java" name="NewLabelScreen" offset="509" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\NewLabelScreen.java" resourceName="NewLabelScreen.java" timestamp="1">
-<Metric name="Metric:NCC" value="2"/>
+<Metric name="Metric:NCPC" value="2"/>
 <Metric name="Metric:HPVoc" value="28"/>
 <Metric name="Metric:NOO" value="3"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -468,7 +468,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="1205" fqname="ubc.midp.mobilephoto.core.ui.screens.SplashScreen" kind="2" language="java" line="11" location="ubc.midp.mobilephoto.core.ui.screens:SplashScreen:SplashScreen.java" name="SplashScreen" offset="291" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\SplashScreen.java" resourceName="SplashScreen.java" timestamp="1">
-<Metric name="Metric:NCC" value="0"/>
+<Metric name="Metric:NCPC" value="0"/>
 <Metric name="Metric:HPVoc" value="12"/>
 <Metric name="Metric:NOO" value="5"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -740,7 +740,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="2574" fqname="ubc.midp.mobilephoto.core.ui.screens.PhotoViewScreen" kind="2" language="java" line="19" location="ubc.midp.mobilephoto.core.ui.screens:PhotoViewScreen:PhotoViewScreen.java" name="PhotoViewScreen" offset="619" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\PhotoViewScreen.java" resourceName="PhotoViewScreen.java" timestamp="1">
-<Metric name="Metric:NCC" value="5"/>
+<Metric name="Metric:NCPC" value="5"/>
 <Metric name="Metric:HPVoc" value="45"/>
 <Metric name="Metric:NOO" value="2"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -885,7 +885,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="1910" fqname="ubc.midp.mobilephoto.core.ui.screens.PhotoListScreen" kind="2" language="java" line="20" location="ubc.midp.mobilephoto.core.ui.screens:PhotoListScreen:PhotoListScreen.java" name="PhotoListScreen" offset="510" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\PhotoListScreen.java" resourceName="PhotoListScreen.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="25"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -996,7 +996,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/screens" endOffset="2085" fqname="ubc.midp.mobilephoto.core.ui.screens.AlbumListScreen" kind="2" language="java" line="20" location="ubc.midp.mobilephoto.core.ui.screens:AlbumListScreen:AlbumListScreen.java" name="AlbumListScreen" offset="456" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\screens\AlbumListScreen.java" resourceName="AlbumListScreen.java" timestamp="1">
-<Metric name="Metric:NCC" value="2"/>
+<Metric name="Metric:NCPC" value="2"/>
 <Metric name="Metric:HPVoc" value="43"/>
 <Metric name="Metric:NOO" value="3"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1182,7 +1182,7 @@
 <Metric name="Metric:NOLV" value="0"/>
 <Metric name="Metric:NOM" value="6"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="4"/>
+<Metric name="Metric:NCC" value="4"/>
 <Metric name="Metric:LCOM3" value="-1"/>
 <Metric name="Metric:RFC" value="207"/>
 <Metric name="Metric:DOIH" value="30"/>
@@ -1261,7 +1261,7 @@
 <Metric name="Metric:HEff" value="229"/>
 <Metric name="Metric:NOAM" value="0"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="402" fqname="lancs.midp.mobilephoto.lib.exceptions.InvalidImageDataException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:InvalidImageDataException:InvalidImageDataException.java" name="InvalidImageDataException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\InvalidImageDataException.java" resourceName="InvalidImageDataException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1406,7 +1406,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="237" fqname="lancs.midp.mobilephoto.lib.exceptions.InvalidPhotoAlbumNameException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:InvalidPhotoAlbumNameException:InvalidPhotoAlbumNameException.java" name="InvalidPhotoAlbumNameException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\InvalidPhotoAlbumNameException.java" resourceName="InvalidPhotoAlbumNameException.java" timestamp="1">
-<Metric name="Metric:NCC" value="4"/>
+<Metric name="Metric:NCPC" value="4"/>
 <Metric name="Metric:HPVoc" value="2"/>
 <Metric name="Metric:NOO" value="0"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1517,7 +1517,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="379" fqname="lancs.midp.mobilephoto.lib.exceptions.ImageNotFoundException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:ImageNotFoundException:ImageNotFoundException.java" name="ImageNotFoundException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\ImageNotFoundException.java" resourceName="ImageNotFoundException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1662,7 +1662,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="376" fqname="lancs.midp.mobilephoto.lib.exceptions.NullAlbumDataReference" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:NullAlbumDataReference:NullAlbumDataReference.java" name="NullAlbumDataReference" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\NullAlbumDataReference.java" resourceName="NullAlbumDataReference.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1807,7 +1807,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="409" fqname="lancs.midp.mobilephoto.lib.exceptions.UnavailablePhotoAlbumException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:UnavailablePhotoAlbumException:UnavailablePhotoAlbumException.java" name="UnavailablePhotoAlbumException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\UnavailablePhotoAlbumException.java" resourceName="UnavailablePhotoAlbumException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -1952,7 +1952,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="409" fqname="lancs.midp.mobilephoto.lib.exceptions.ImagePathNotValidException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:ImagePathNotValidException:ImagePathNotValidException.java" name="ImagePathNotValidException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\ImagePathNotValidException.java" resourceName="ImagePathNotValidException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="5"/>
@@ -2097,7 +2097,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="340" fqname="lancs.midp.mobilephoto.lib.exceptions.InvalidArrayFormatException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:InvalidArrayFormatException:InvalidArrayFormatException.java" name="InvalidArrayFormatException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\InvalidArrayFormatException.java" resourceName="InvalidArrayFormatException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="3"/>
 <Metric name="Metric:NOO" value="0"/>
 <Metric name="Metric:TRAp" value="20"/>
@@ -2225,7 +2225,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="405" fqname="lancs.midp.mobilephoto.lib.exceptions.PersistenceMechanismException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:PersistenceMechanismException:PersistenceMechanismException.java" name="PersistenceMechanismException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\PersistenceMechanismException.java" resourceName="PersistenceMechanismException.java" timestamp="1">
-<Metric name="Metric:NCC" value="2"/>
+<Metric name="Metric:NCPC" value="2"/>
 <Metric name="Metric:HPVoc" value="6"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -2370,7 +2370,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/lancs/midp/mobilephoto/lib/exceptions" endOffset="327" fqname="lancs.midp.mobilephoto.lib.exceptions.InvalidImageFormatException" kind="2" language="java" line="3" location="lancs.midp.mobilephoto.lib.exceptions:InvalidImageFormatException:InvalidImageFormatException.java" name="InvalidImageFormatException" offset="50" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\lancs\midp\mobilephoto\lib\exceptions\InvalidImageFormatException.java" resourceName="InvalidImageFormatException.java" timestamp="1">
-<Metric name="Metric:NCC" value="3"/>
+<Metric name="Metric:NCPC" value="3"/>
 <Metric name="Metric:HPVoc" value="3"/>
 <Metric name="Metric:NOO" value="0"/>
 <Metric name="Metric:TRAp" value="13"/>
@@ -2505,7 +2505,7 @@
 <Metric name="Metric:NOLV" value="64"/>
 <Metric name="Metric:NOM" value="37"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="5"/>
+<Metric name="Metric:NCC" value="5"/>
 <Metric name="Metric:LCOM3" value="216"/>
 <Metric name="Metric:RFC" value="125"/>
 <Metric name="Metric:DOIH" value="3"/>
@@ -2584,7 +2584,7 @@
 <Metric name="Metric:HEff" value="118473"/>
 <Metric name="Metric:NOAM" value="-1"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/datamodel" endOffset="15689" fqname="ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor" kind="2" language="java" line="33" location="ubc.midp.mobilephoto.core.ui.datamodel:ImageAccessor:ImageAccessor.java" name="ImageAccessor" offset="1336" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\datamodel\ImageAccessor.java" resourceName="ImageAccessor.java" timestamp="1">
-<Metric name="Metric:NCC" value="5"/>
+<Metric name="Metric:NCPC" value="5"/>
 <Metric name="Metric:HPVoc" value="144"/>
 <Metric name="Metric:NOO" value="13"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -2899,7 +2899,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/datamodel" endOffset="2771" fqname="ubc.midp.mobilephoto.core.ui.datamodel.ImageData" kind="2" language="java" line="17" location="ubc.midp.mobilephoto.core.ui.datamodel:ImageData:ImageData.java" name="ImageData" offset="539" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\datamodel\ImageData.java" resourceName="ImageData.java" timestamp="1">
-<Metric name="Metric:NCC" value="5"/>
+<Metric name="Metric:NCPC" value="5"/>
 <Metric name="Metric:HPVoc" value="18"/>
 <Metric name="Metric:NOO" value="11"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -3180,7 +3180,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/datamodel" endOffset="6326" fqname="ubc.midp.mobilephoto.core.ui.datamodel.AlbumData" kind="2" language="java" line="28" location="ubc.midp.mobilephoto.core.ui.datamodel:AlbumData:AlbumData.java" name="AlbumData" offset="1124" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\datamodel\AlbumData.java" resourceName="AlbumData.java" timestamp="1">
-<Metric name="Metric:NCC" value="5"/>
+<Metric name="Metric:NCPC" value="5"/>
 <Metric name="Metric:HPVoc" value="35"/>
 <Metric name="Metric:NOO" value="12"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -3485,7 +3485,7 @@
 <Metric name="Metric:NOLV" value="0"/>
 <Metric name="Metric:NOM" value="3"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="1"/>
+<Metric name="Metric:NCC" value="1"/>
 <Metric name="Metric:LCOM3" value="-1"/>
 <Metric name="Metric:RFC" value="26"/>
 <Metric name="Metric:DOIH" value="2"/>
@@ -3564,7 +3564,7 @@
 <Metric name="Metric:HEff" value="111"/>
 <Metric name="Metric:NOAM" value="0"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui" endOffset="2015" fqname="ubc.midp.mobilephoto.core.ui.MainUIMidlet" kind="2" language="java" line="29" location="ubc.midp.mobilephoto.core.ui:MainUIMidlet:MainUIMidlet.java" name="MainUIMidlet" offset="1163" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\MainUIMidlet.java" resourceName="MainUIMidlet.java" timestamp="1">
-<Metric name="Metric:NCC" value="2"/>
+<Metric name="Metric:NCPC" value="2"/>
 <Metric name="Metric:HPVoc" value="7"/>
 <Metric name="Metric:NOO" value="3"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -3716,7 +3716,7 @@
 <Metric name="Metric:NOLV" value="0"/>
 <Metric name="Metric:NOM" value="1"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="0"/>
+<Metric name="Metric:NCC" value="0"/>
 <Metric name="Metric:LCOM3" value="-1"/>
 <Metric name="Metric:RFC" value="14"/>
 <Metric name="Metric:DOIH" value="1"/>
@@ -3795,7 +3795,7 @@
 <Metric name="Metric:HEff" value="146"/>
 <Metric name="Metric:NOAM" value="-1"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/threads" endOffset="711" fqname="ubc.midp.mobilephoto.core.threads.BaseThread" kind="2" language="java" line="8" location="ubc.midp.mobilephoto.core.threads:BaseThread:BaseThread.java" name="BaseThread" offset="328" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\threads\BaseThread.java" resourceName="BaseThread.java" timestamp="1">
-<Metric name="Metric:NCC" value="0"/>
+<Metric name="Metric:NCPC" value="0"/>
 <Metric name="Metric:HPVoc" value="8"/>
 <Metric name="Metric:NOO" value="1"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -3913,7 +3913,7 @@
 <Metric name="Metric:NOLV" value="27"/>
 <Metric name="Metric:NOM" value="3"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="4"/>
+<Metric name="Metric:NCC" value="4"/>
 <Metric name="Metric:LCOM3" value="0"/>
 <Metric name="Metric:RFC" value="55"/>
 <Metric name="Metric:DOIH" value="2"/>
@@ -3992,7 +3992,7 @@
 <Metric name="Metric:HEff" value="82137"/>
 <Metric name="Metric:NOAM" value="-1"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/util" endOffset="7063" fqname="ubc.midp.mobilephoto.core.util.ImageUtil" kind="2" language="java" line="19" location="ubc.midp.mobilephoto.core.util:ImageUtil:ImageUtil.java" name="ImageUtil" offset="730" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\util\ImageUtil.java" resourceName="ImageUtil.java" timestamp="1">
-<Metric name="Metric:NCC" value="6"/>
+<Metric name="Metric:NCPC" value="6"/>
 <Metric name="Metric:HPVoc" value="68"/>
 <Metric name="Metric:NOO" value="3"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -4137,7 +4137,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/util" endOffset="1226" fqname="ubc.midp.mobilephoto.core.util.Constants" kind="2" language="java" line="12" location="ubc.midp.mobilephoto.core.util:Constants:Constants.java" name="Constants" offset="253" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\util\Constants.java" resourceName="Constants.java" timestamp="1">
-<Metric name="Metric:NCC" value="2"/>
+<Metric name="Metric:NCPC" value="2"/>
 <Metric name="Metric:HPVoc" value="9"/>
 <Metric name="Metric:NOO" value="0"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -4221,7 +4221,7 @@
 <Metric name="Metric:NOLV" value="63"/>
 <Metric name="Metric:NOM" value="24"/>
 <Metric name="Metric:JUC" value="0"/>
-<Metric name="Metric:NCCl" value="1"/>
+<Metric name="Metric:NCC" value="1"/>
 <Metric name="Metric:LCOM3" value="140"/>
 <Metric name="Metric:RFC" value="115"/>
 <Metric name="Metric:DOIH" value="2"/>
@@ -4300,7 +4300,7 @@
 <Metric name="Metric:HEff" value="412201"/>
 <Metric name="Metric:NOAM" value="-1"/>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/controller" endOffset="1024" fqname="ubc.midp.mobilephoto.core.ui.controller.ControllerInterface" kind="2" language="java" line="24" location="ubc.midp.mobilephoto.core.ui.controller:ControllerInterface:ControllerInterface.java" name="ControllerInterface" offset="850" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\controller\ControllerInterface.java" resourceName="ControllerInterface.java" timestamp="1">
-<Metric name="Metric:NCC" value="1"/>
+<Metric name="Metric:NCPC" value="1"/>
 <Metric name="Metric:HPVoc" value="0"/>
 <Metric name="Metric:NOO" value="2"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -4411,7 +4411,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/controller" endOffset="23297" fqname="ubc.midp.mobilephoto.core.ui.controller.BaseController" kind="2" language="java" line="43" location="ubc.midp.mobilephoto.core.ui.controller:BaseController:BaseController.java" name="BaseController" offset="1955" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\controller\BaseController.java" resourceName="BaseController.java" timestamp="1">
-<Metric name="Metric:NCC" value="7"/>
+<Metric name="Metric:NCPC" value="7"/>
 <Metric name="Metric:HPVoc" value="184"/>
 <Metric name="Metric:NOO" value="20"/>
 <Metric name="Metric:TRAp" value="0"/>
@@ -4862,7 +4862,7 @@
 </MetricDescription>
 </MetricDescription>
 <MetricDescription containerName="/Mobile Media03_OO/src/ubc/midp/mobilephoto/core/ui/controller" endOffset="2108" fqname="ubc.midp.mobilephoto.core.ui.controller.PhotoController" kind="2" language="java" line="17" location="ubc.midp.mobilephoto.core.ui.controller:PhotoController:PhotoController.java" name="PhotoController" offset="438" projectName="Mobile Media03_OO" resource="\Mobile Media03_OO\src\ubc\midp\mobilephoto\core\ui\controller\PhotoController.java" resourceName="PhotoController.java" timestamp="1">
-<Metric name="Metric:NCC" value="4"/>
+<Metric name="Metric:NCPC" value="4"/>
 <Metric name="Metric:HPVoc" value="30"/>
 <Metric name="Metric:NOO" value="7"/>
 <Metric name="Metric:TRAp" value="0"/>

@@ -2,7 +2,7 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 
 import java.util.Collection;
 
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public abstract class MetricsRepository {
 
@@ -18,7 +18,7 @@ public abstract class MetricsRepository {
 
 	public abstract Collection<Metric> listAllMetrics();
 	
-	public abstract Collection<calculatedMetric> listCalculatedMetrics();
+	public abstract Collection<CalculatedMetric> listCalculatedMetrics();
 	
 	public abstract Collection<HistorySensitiveMetric> listHistorySensitiveMetrics();
 

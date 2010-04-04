@@ -17,7 +17,12 @@ public class Package extends Entity {
 	}
 	
 	public List<Class> getClasses(Version version) {
-		return Collections.unmodifiableList(classes.get(version));
+		List<Class> list = classes.get(version);
+		
+		if(list == null)
+			return Collections.emptyList();
+		
+		return Collections.unmodifiableList(list);
 	}
 
 	public Set<Class> getClassesOfAllVersions() {
@@ -29,7 +34,12 @@ public class Package extends Entity {
 	}
 
 	public List<Package> getPackages(Version version) {
-		return Collections.unmodifiableList(packages.get(version));
+		List<Package> list = packages.get(version);
+		
+		if(list == null)
+			return Collections.emptyList();
+		
+		return Collections.unmodifiableList(list);
 	}
 
 	public List<Package> addPackages(Version version, List<Package> packages) {

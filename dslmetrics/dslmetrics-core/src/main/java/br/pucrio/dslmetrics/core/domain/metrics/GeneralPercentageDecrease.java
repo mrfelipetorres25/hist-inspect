@@ -1,13 +1,13 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class GeneralPercentageDecrease extends ChangeHistorySensitiveMetric {
 
 	private static final String GENERAL_NAME = "General Percentage Decrease";
 	private final String GENERAL_NICKNAME = "gpd";
 
-	public GeneralPercentageDecrease(calculatedMetric conventionalMetric) {
+	public GeneralPercentageDecrease(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 
@@ -28,12 +28,12 @@ public class GeneralPercentageDecrease extends ChangeHistorySensitiveMetric {
 
 	@Override
 	public String getGeneralNickname() {
-		return GENERAL_NAME;
+		return GENERAL_NICKNAME;	
 	}
 
 	@Override
 	public String getGeneralName() {
-		return GENERAL_NICKNAME;
+		return GENERAL_NAME;
 	}
 
 }

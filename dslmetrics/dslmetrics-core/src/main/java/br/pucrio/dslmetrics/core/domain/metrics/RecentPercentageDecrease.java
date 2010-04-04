@@ -1,13 +1,13 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class RecentPercentageDecrease extends ChangeHistorySensitiveMetric {
 
 	private static final String GENERAL_NAME = "Recent Percentage Decrease";
 	private final String GENERAL_NICKNAME = "rpd";
 
-	public RecentPercentageDecrease(calculatedMetric conventionalMetric) {
+	public RecentPercentageDecrease(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 

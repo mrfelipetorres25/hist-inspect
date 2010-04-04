@@ -1,24 +1,23 @@
 package br.pucrio.dslmetrics.core.domain;
 
+import java.util.Collection;
 import java.util.Set;
 
+import br.pucrio.dslmetrics.core.domain.metrics.HistorySensitiveMetric;
+import br.pucrio.dslmetrics.core.domain.metrics.MetricsRepository;
 import br.pucrio.dslmetrics.core.domain.metrics.NonCalculatedMetric;
 
 public class ProjectReader {
 
 	private ProjectBuilder builder;
 
-	private NonCalculatedMetric [] metrics;
+	private Collection<HistorySensitiveMetric> metrics;
 
 	public ProjectReader(ProjectBuilder builder) {
 		this.builder = builder;
 
-		metrics = createMetrics();
+		metrics = MetricsRepository.getInstance().listHistorySensitiveMetrics();
 
-	}
-
-	private NonCalculatedMetric [] createMetrics() {
-		return new NonCalculatedMetric [] { };
 	}
 
 	private void applyMetrics(Entity entity) {
