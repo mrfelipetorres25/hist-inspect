@@ -1,7 +1,7 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class RelativeNumberOfChange extends ChangeHistorySensitiveMetric {
 
@@ -10,7 +10,7 @@ public class RelativeNumberOfChange extends ChangeHistorySensitiveMetric {
 	private int numberOfChanges;
 	private int timelife;
 
-	public RelativeNumberOfChange(calculatedMetric conventionalMetric) {
+	public RelativeNumberOfChange(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 

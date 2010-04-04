@@ -319,7 +319,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 
 		T childEntity = creator.newEntity(metricDescriptionType.getName(), metricDescriptionType.getFqname());
 		entities.add(childEntity);
-		identityMap.put(childEntity.getName(), childEntity);
+		identityMap.put(childEntity.getFullQualifiedName(), childEntity);
 
 		HashMap<Version, MetricDescriptionType> versionMetricDescriptionMap = new HashMap<Version, MetricDescriptionType>();
 		versionMetricDescriptionMap.put(version, metricDescriptionType);
@@ -328,7 +328,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 	}
 
 	private void populateMetrics(MetricType[] mtblMetrics, Entity entity,
-			Version version) {
+			Version version) throws ProjectBuilderException {
 
 		Map<Metric, Double> metricsMap = new HashMap<Metric, Double>();		
 
@@ -342,6 +342,9 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 				metricName = split[1];
 			
 			Metric metric = metricsRepository.getMetricByNickname(metricName);
+			
+			if(metric == null) 
+				throw new ProjectBuilderException(MessageFormat.format("Unreconizable metric nickname \"{0}\" in .mtbl file.", metricName));
 
 			metricsMap.put(metric, metricValue);
 		}
@@ -444,7 +447,7 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 		LinkedList<XmlError> xmlErrors = new LinkedList<XmlError>();
 
 		XmlOptions xmlOptions = new XmlOptions().setLoadLineNumbers()
-				.setErrorListener(xmlErrors);
+				.setErrorListener(xmlErrors).setDocumentSourceName(file.getAbsolutePath());
 
 		try {
 			T document = documentCreator.parse(file, xmlOptions);
@@ -470,6 +473,12 @@ public class XmlMtblDomainBuilder implements ProjectBuilder {
 		return null; // Nunca acontecerá.
 	}
 
+	private void throwXmlDomainBuilderException(String message,
+			XmlObject xmlObject, File file)
+			throws XmlDomainBuilderException {
+		throwXmlDomainBuilderException(message, xmlObject, null, file);
+	}
+	
 	private void throwXmlDomainBuilderException(String message,
 			XmlObject xmlObject, Throwable cause, File file)
 			throws XmlDomainBuilderException {

@@ -1,6 +1,6 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class AbsoluteDifferenceOfRecentChange extends
 		ChangeHistorySensitiveMetric {
@@ -8,7 +8,7 @@ public class AbsoluteDifferenceOfRecentChange extends
 	public static final String GENERAL_NAME = "Absolute Difference of Recent Change";
 	public static final String GENERAL_NICKNAME = "adrc";
 
-	public AbsoluteDifferenceOfRecentChange(calculatedMetric conventionalMetric) {
+	public AbsoluteDifferenceOfRecentChange(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 

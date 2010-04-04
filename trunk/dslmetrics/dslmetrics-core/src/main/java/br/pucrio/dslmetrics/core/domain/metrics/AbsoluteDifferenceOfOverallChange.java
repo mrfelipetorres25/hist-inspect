@@ -1,7 +1,7 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class AbsoluteDifferenceOfOverallChange extends
 		ChangeHistorySensitiveMetric {
@@ -11,7 +11,7 @@ public class AbsoluteDifferenceOfOverallChange extends
 	private double accumulatedValue;
 
 	public AbsoluteDifferenceOfOverallChange(
-			calculatedMetric calculatedMetric) {
+			CalculatedMetric calculatedMetric) {
 		super(calculatedMetric);
 	}
 

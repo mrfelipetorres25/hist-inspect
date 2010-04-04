@@ -1,7 +1,7 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class AbsoluteNumberOfChange extends ChangeHistorySensitiveMetric {
 
@@ -9,7 +9,7 @@ public class AbsoluteNumberOfChange extends ChangeHistorySensitiveMetric {
 	public final String GENERAL_NAME = "Absolute Number of Change";
 	private int numberOfChange;
 
-	public AbsoluteNumberOfChange(calculatedMetric conventionalMetric) {
+	public AbsoluteNumberOfChange(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 

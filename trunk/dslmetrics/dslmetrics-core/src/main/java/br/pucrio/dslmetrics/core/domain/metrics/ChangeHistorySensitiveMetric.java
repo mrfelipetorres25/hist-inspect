@@ -4,14 +4,14 @@ import java.util.SortedSet;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.domain.Version;
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public abstract class ChangeHistorySensitiveMetric implements
 		HistorySensitiveMetric {
 
-	private final calculatedMetric conventionalMetric;
+	private final CalculatedMetric conventionalMetric;
 
-	public ChangeHistorySensitiveMetric(calculatedMetric calculatedMetric) {
+	public ChangeHistorySensitiveMetric(CalculatedMetric calculatedMetric) {
 		this.conventionalMetric = calculatedMetric;
 	}
 

@@ -1,7 +1,7 @@
 package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.domain.Entity;
-import br.pucrio.dslmetrics.core.mtbl.calculatedMetric;
+import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
 public class RelativeDifferenceOfOverallChange extends
 		ChangeHistorySensitiveMetric {
@@ -14,7 +14,7 @@ public class RelativeDifferenceOfOverallChange extends
 	private double accumulatedValue = 0.0;
 
 	public RelativeDifferenceOfOverallChange(
-			calculatedMetric conventionalMetricParameter) {
+			CalculatedMetric conventionalMetricParameter) {
 		super(conventionalMetricParameter);
 	}
 

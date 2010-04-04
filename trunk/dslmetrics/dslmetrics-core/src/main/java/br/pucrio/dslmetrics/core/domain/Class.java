@@ -18,7 +18,12 @@ public class Class extends Entity {
 	}
 	
 	public List<Method> getMethods(Version version) {
-		return Collections.unmodifiableList(methods.get(version));
+		List<Method> list = methods.get(version);
+		
+		if(list == null)
+			return Collections.emptyList();
+		
+		return Collections.unmodifiableList(list);
 	}
 
 	public List<Method> setMethods(Version version, List<Method> methods) {
@@ -30,7 +35,12 @@ public class Class extends Entity {
 	}
 	
 	public List<Class> getClasses(Version version) {
-		return Collections.unmodifiableList(classes.get(version));
+		List<Class> list = classes.get(version);
+		
+		if (list == null) 
+			return Collections.emptyList();
+		
+		return Collections.unmodifiableList(list);
 	}
 	
 	public List<Class> setClasses(Version version, List<Class> classes) {

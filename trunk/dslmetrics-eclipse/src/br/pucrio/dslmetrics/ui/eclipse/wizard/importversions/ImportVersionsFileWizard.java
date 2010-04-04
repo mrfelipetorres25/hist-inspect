@@ -6,10 +6,8 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.dialogs.ErrorDialog;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
@@ -40,7 +38,7 @@ public class ImportVersionsFileWizard extends Wizard {
 						throws InvocationTargetException, InterruptedException {
 					monitor.beginTask(
 							"Loading all project versions and metrics...",
-							monitor.UNKNOWN);
+							IProgressMonitor.UNKNOWN);
 
 					ProjectReader projectReader;
 

@@ -111,20 +111,6 @@ public class Entity {
 			return null;
 	}
 	
-//	public Double getMetricValueByName(Version version, String metricName) {
-//		Map<Metric, Double> metricValueMap = versionMetricMap.get(version);
-//		
-//		if (metricValueMap != null){
-//			Set<Metric> metrics = metricValueMap.keySet();
-//			for (Metric metric : metrics) 
-//				if(metric.getName().equals(metricName))
-//					return metricValueMap.get(metric);
-//			
-//		}
-//			
-//		return null;
-//	}
-
 	protected <T extends Entity> Set<T> getEntitiesOfAllVersions(
 			Map<Version, List<T>> entities) {
 		Set<T> allEntities = new HashSet<T>();

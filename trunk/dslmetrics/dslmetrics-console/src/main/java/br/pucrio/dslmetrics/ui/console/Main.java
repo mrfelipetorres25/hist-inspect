@@ -13,6 +13,7 @@ import uk.co.flamingpenguin.jewel.cli.CliFactory;
 import br.pucrio.dslmetrics.core.domain.Project;
 import br.pucrio.dslmetrics.core.domain.ProjectBuilderException;
 import br.pucrio.dslmetrics.core.domain.ProjectReader;
+import br.pucrio.dslmetrics.core.domain.walker.ProjectWalker;
 import br.pucrio.dslmetrics.core.mtbl.XmlDomainBuilderException;
 import br.pucrio.dslmetrics.core.mtbl.XmlMtblDomainBuilder;
 import br.pucrio.dslmetrics.core.precisionrecall.ReferenceListCatalog;
@@ -74,6 +75,10 @@ public class Main {
 			report.generateReport(file);
 
 			System.out.println("Finished!");
+			
+			ProjectWalker projectWalker = new ProjectWalker(new DomainConsolePrinter());
+			projectWalker.walk(project);
+			
 		} catch (ArgumentValidationException e) {
 			System.out
 					.println("MINIMAL USAGE: dsl-metrics -v VERSIONS-FILE -o OUTPUT-REPORT");
