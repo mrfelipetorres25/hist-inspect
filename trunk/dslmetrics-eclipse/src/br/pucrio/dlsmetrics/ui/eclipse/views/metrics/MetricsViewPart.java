@@ -14,6 +14,8 @@ import org.eclipse.jface.fieldassist.IContentProposal;
 import org.eclipse.jface.fieldassist.IContentProposalListener2;
 import org.eclipse.jface.fieldassist.IContentProposalProvider;
 import org.eclipse.jface.fieldassist.TextContentAdapter;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyAdapter;
@@ -34,6 +36,9 @@ import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.ui.actions.ActionFactory;
+import org.eclipse.ui.handlers.IHandlerActivation;
+import org.eclipse.ui.handlers.IHandlerService;
 import org.eclipse.ui.part.ViewPart;
 
 import br.pucrio.dslmetrics.core.domain.Project;
@@ -173,6 +178,8 @@ public class MetricsViewPart extends ViewPart {
 	public static int WIDTH_ENTITIES_COLUMN = 300;
 	public static final int WIDTH_METRIC_COLUMN = 50;
 
+	private CopyMetricsHandler copyHandler;
+
 	public MetricsViewPart() {
 		allAvailableMetrics = new HashSet<Metric>(metricsRepository
 				.listAllMetrics());
@@ -203,6 +210,8 @@ public class MetricsViewPart extends ViewPart {
 		configureLayout();
 
 		configureEvents();
+		
+		hookGlobalHandlers();
 
 	}
 
@@ -279,9 +288,36 @@ public class MetricsViewPart extends ViewPart {
 		treeViewer.getTree().setLayoutData(formData);
 	}
 
+	private void hookGlobalHandlers() {
+		final IHandlerService handlerService = (IHandlerService) getViewSite()
+				.getService(IHandlerService.class);
+
+		copyHandler = new CopyMetricsHandler(treeViewer);
+		
+		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
+			private IHandlerActivation copyActivation;
+
+			public void selectionChanged(SelectionChangedEvent event) {
+				if (event.getSelection().isEmpty()) {
+					if (copyActivation != null) {
+						handlerService.deactivateHandler(copyActivation);
+						copyActivation = null;
+					}
+				} else {
+					if (copyActivation == null) {
+						copyActivation = handlerService.activateHandler(
+								ActionFactory.COPY.getCommandId(),
+								copyHandler);
+					}
+				}
+			}
+		});
+
+	}
+
 	private void configureTable(Composite parent) {
 
-		treeViewer = new TreeViewer(parent, SWT.VIRTUAL);
+		treeViewer = new TreeViewer(parent, SWT.VIRTUAL | SWT.MULTI);
 		contentProvider = new MetricsTreeContentProvider();
 		treeViewer.setContentProvider(contentProvider);
 		treeViewer.setUseHashlookup(true);
@@ -304,7 +340,6 @@ public class MetricsViewPart extends ViewPart {
 				tree.setMenu(headerMenu);
 			}
 		});
-
 	}
 
 	@Override
