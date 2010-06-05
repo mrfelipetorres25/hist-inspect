@@ -3,6 +3,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * quantidade de alterações (ou instabilidade) de uma dada propriedade ao longo das versões
+ * @author leandra
+ *
+ */
 public class AbsoluteNumberOfChange extends ChangeHistorySensitiveMetric {
 
 	public static final String GENERAL_NICKNAME = "anc";

@@ -1,13 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rule-catalog>
-	<rule id="ypto" name="YPTO RULE" anomaly="GC" expression="LOC == 244 || LOC == 56"/>
-	<rule id="zpto" name="ZPTO RULE" anomaly="DC" expression="LOC > 5"/>
-	<rule id="wpto" name="WPTO RULE" anomaly="DC" expression="LOC > 5 || CBO > 2"/>
 
-	<rule id="Marinescu_2006_GC" name="MARINESCU 2006 - GC" anomaly="GC" expression="AID &gt; 4 &amp;&amp; WMPC1 >= 47 &amp;&amp; TCC &lt; 33"/>
-	<rule id="Marinescu_2006_FE" name="MARINESCU 2006 - FE" anomaly="GC">
-		<![CDATA[AID > 4 && WMPC1 >= 47 && NIC <= 4]]>
-	</rule>
+<!-- Estratégias Puras Sensíveis à História DC -->
+	<rule id="DC_MARA_2010SH1" name="DC-SH1 (MARA 2010)" anomaly="DC" expression="DD > 6"/> 
 	
+	<rule id="DC_MARA_2010SH2" name="DC-SH2 (MARA 2010)" anomaly="DC" expression="NOED > 11"/>
+	<rule id="DC_MARA_2010SH3" name="DC-SH3 (MARA 2010)" anomaly="DC" expression="NOED > 12"/>
+	<rule id="DC_MARA_2010SH4" name="DC-SH4 (MARA 2010)" anomaly="DC" expression="NOED > 12 || rniNOED > 0.5" />
+	
+	<rule id="DC_MARA_2010SH5" name="DC-SH5 (MARA 2010)" anomaly="DC" expression="DD > 6 || rniNOED > 0.5"/>
+	
+	<rule id="DC_MARA_2010SH6" name="DC-SH6 (MARA 2010)" anomaly="DC" expression="DD > 6 || rniDD > 0.5"/>
+	
+	<!-- não é boa
+	<rule id="DC_MARA_2010SH7" name="DC-SH7 (MARA 2010)" anomaly="DC" expression="DD > 7 &amp;&amp; NOED >12"/>
+	 -->
+	<rule id="DC_MARA_2010SH10" name="DC-SH10 (MARA 2010)" anomaly="DC" expression="rniDD >= 0.5"/>
+	<rule id="DC_MARA_2010SH11" name="DC-SH11 (MARA 2010)" anomaly="DC" expression="DD > 7 || NOED >12 || rniNOED > 0.5"/>
+	
+	<rule id="DC_MARA_2010SH12" name="DC-SH12 (MARA 2010)" anomaly="DC" expression="(NOED > 12 || rniNOED > 0.5) &amp;&amp; rpiLOC > 0.0 " />
+	
+	
+	 <rule id="DC_MARA_2010SH20" name="DC-SH20 (MARA 2010)" anomaly="DC" expression="DD > 4 &amp;&amp; NOED > 12"/>
+	 <rule id="DC_MARA_2010SH21" name="DC-SH21 (MARA 2010)" anomaly="DC" expression="DD >= 5 &amp;&amp; NOED > 12 &amp;&amp; (rniLOC >= 0.33 || TL == 0.0)"/>
+	 
+	 	
+	<!-- 
+	<rule id="DC_MARA_2010SH8" name="DC-SH78(MARA 2010)" anomaly="DC" expression="DD > 7 &amp;&amp; NOED > 12"/>
+	
+	<rule id="DC_MARA_2010SH9" name="DC-SH9 (MARA 2010)" anomaly="DC" expression="(DD > 7 &amp;&amp; NOED > 12) || rniNOED > 0.5"/>
+	 -->
+
+
+<!-- Estratégias Puras Sensíveis à História 	 	
+	
+	
+	<rule id="GC_MARA_2010SH1" name="GC-SH1 (MARA 2010)" anomaly="GC" expression="rncLOC == 1"/>
+	<rule id="GC_MARA_2010SH2" name="GC-SH2 (MARA 2010)" anomaly="GC" expression="rdocLOC > 10"/>
+	<rule id="GC_MARA_2010SH3" name="GC-SH3 (MARA 2010)" anomaly="GC" expression="rncLOC >= 0.5"/>
+	<rule id="GC_MARA_2010SH4" name="GC-SH4 (MARA 2010)" anomaly="GC" expression="rniLOC >= 0.5"/>	
+	<rule id="GC_MARA_2010SH5" name="GC-SH5 (MARA 2010)" anomaly="GC" expression="rdocWMPC1 > 5"/>
+	<rule id="GC_MARA_2010SH6" name="GC-SH6 (MARA 2010)" anomaly="GC" expression="rncWMPC1 >= 0.5"/>
+	
+	<rule id="GC_MARA_2010SH7" name="GC-SH67(MARA 2010)" anomaly="GC" expression="rniWMPC1 >= 0.4"/>
+	
+	<rule id="GC_MARA_2010SH8" name="GC-SH8 (MARA 2010)" anomaly="GC" expression="rndTCC >= 0.5"/>
+	<rule id="GC_MARA_2010SH9" name="GC-SH9 (MARA 2010)" anomaly="GC" expression="gpdTCC > 0"/>
+	<rule id="GC_MARA_2010SH10" name="GC-SH10 (MARA 2010)" anomaly="GC" expression="rndTCC > 0.3"/>
+	<rule id="GC_MARA_2010S11" name="GC-SH11 (MARA 2010)" anomaly="GC" expression="rdocLOC > 10 &amp;&amp; rniWMPC1 >= 0.4"/>
+	
+Fim - Estratégias Puras Sensíveis à História-->
+	
+<!-- nova Domingo 
+	
+	<rule id="GC_MARA_2010S12" name="GC-SH212 (MARA 2010)" anomaly="GC" expression="rpiLOC > 0.0 &amp;&amp; rpiWMPC1 > 0.0"/>
+	<rule id="GC_MARA_2010S13" name="GC-SH213 (MARA 2010)" anomaly="GC" expression="(rpiLOC > 0.0 &amp;&amp; rpiWMPC1 > 0.0) &amp;&amp; pLOC > 197 &amp;&amp; pWMPC1 > 26 "/>
+	
+Fim - Nova domingo-->
+
+<!-- Estratégias Puras Convencionais    
+	<rule id="GC_Marinescu_2002" name="GC (MARINESCU 2002)" anomaly="GC" expression="(AOFD &gt; 4) &amp;&amp; (WMPC1 &gt; 20 || TCC &lt; 33)"/>
+	<rule id="GC_Marinescu_2006" name="GC (MARINESCU 2006)" anomaly="GC" expression="AID &gt; 4 &amp;&amp; WMPC1 >= 47 &amp;&amp; TCC &lt; 33"/>
+	<rule id="GC_Marinescu_2006" name="GC (MARINESCU 2006)" anomaly="GC" expression="WMPC >=47 &amp;&amp; TCC &lt; 50"/>
+	<rule id="GC_MARA_2010A" name="GC (MARA 2010A)" anomaly="GC" expression="(WMPC1 &gt; 25 || LOC &gt; 200) &amp;&amp; TCC &lt; 36"/>
+	<rule id="GC_MARA_2010B" name="GC (MARA 2010B)" anomaly="GC" expression="LOC &gt; 200"/>
+	<rule id="GC_MARA_2010C" name="GC (MARA 2010C)" anomaly="GC" expression="WMPC1 > 27"/>
+	<rule id="GC_MARA_2010D" name="GC (MARA 2010D)" anomaly="GC" expression="(WMPC1 &gt; 27 || LOC &gt; 200)"/>
+	<rule id="GC_MARA_2010F" name="GC (MARA 2010F)" anomaly="GC" expression="NOA > 6 &amp;&amp; NOO > 12"/>
+	<rule id="GC_MARA_2010G" name="GC (MARA 2010G)" anomaly="GC" expression="(WMPC1 &gt; 27 || LOC &gt; 200 || NOO > 15 )"/>
+	<rule id="GC_MARA_2010E" name="GC (MARA 2010E)" anomaly="GC" expression="NOO > 12"/>
+Fim - Estratégias Puras Convencionais-->
+	
+<!-- Novo 
+	<rule id="GC_Marinescu_2006Adap" name="GC (MARINESCU 2006Adap)" anomaly="GC" expression="AID &gt; 4 &amp;&amp; WMPC1 >= 47 &amp;&amp; TCC &lt; 70"/>
+	<rule id="GC_Marinescu_2006Adap2" name="GC (MARINESCU 2006Adap2)" anomaly="GC" expression="AID &gt; 2 &amp;&amp; WMPC1 >= 15 &amp;&amp; TCC &lt; 70 &amp;&amp; LOC > 105"/>
+	<rule id="GC_Marinescu_2006Adap3" name="GC (MARINESCU 2006Adap3)" anomaly="GC" expression="WMPC1 >= 15 &amp;&amp; TCC &lt; 70 &amp;&amp; LOC > 105"/>
+	<rule id="GC_Marinescu_2006Adap4" name="GC (MARINESCU 2006Adap4)" anomaly="GC" expression="(WMPC1 >= 15) &amp;&amp; ((TCC &lt; 70 &amp;&amp; LOC > 300) || (LOC > 105 &amp;&amp; TCC == 0))"/>
+-->
+<!-- 
+<rule id="GC_Marinescu_2002" name="GC (MARINESCU 2002)" anomaly="GC" expression="(AOFD &gt; 4) &amp;&amp; (WMPC1 &gt; 20 || TCC &lt; 33)"/>
+	<rule id="GC_Marinescu_2006" name="GC (MARINESCU 2006)" anomaly="GC" expression="AID &gt; 4 &amp;&amp; WMPC1 >= 47 &amp;&amp; TCC &lt; 33"/>
+	
+	
+<rule id="GC_MARA_2010S13" name="GC-SH213 (MARA 2010)" anomaly="GC" expression="(rpiLOC > 0.0 &amp;&amp; rpiWMPC1 > 0.0) &amp;&amp; pLOC > 197 &amp;&amp; pWMPC1 > 26 "/>
+<rule id="GC_MARA_2010S14" name="GC-SH214 (MARA 2010)" anomaly="GC" expression="(rpiLOC > 0.0 &amp;&amp; rpiWMPC1 > 0.0) &amp;&amp; pLOC > 170 &amp;&amp; pWMPC1 > 25 "/>
+<rule id="GC_MARA_2010S11" name="GC-SH11 (MARA 2010)" anomaly="GC" expression="rdocLOC > 10 &amp;&amp; rniWMPC1 >= 0.4"/>
+ -->
+ 
+ <!-- 
+ <rule id="GC_MARA_2010S11" name="GC-SH11 (MARA 2010)" anomaly="GC" expression="rdocLOC > 5 &amp;&amp; rniWMPC1 >= 0.33"/>
+  -->
+ 
+ 
 	
 </rule-catalog>

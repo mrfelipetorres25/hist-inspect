@@ -3,6 +3,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * retorna o valor acumulado da variação entre as medidas entre as versões
+ * @author leandra
+ *
+ */
 public class AbsoluteDifferenceOfOverallChange extends
 		ChangeHistorySensitiveMetric {
 

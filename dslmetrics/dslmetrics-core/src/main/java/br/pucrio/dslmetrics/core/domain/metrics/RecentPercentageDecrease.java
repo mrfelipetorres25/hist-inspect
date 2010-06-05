@@ -2,6 +2,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * decaimento percentual de uma dada medida, comparada ao seu valor na versão anterior
+ * @author leandra
+ *
+ */
 public class RecentPercentageDecrease extends ChangeHistorySensitiveMetric {
 
 	private static final String GENERAL_NAME = "Recent Percentage Decrease";

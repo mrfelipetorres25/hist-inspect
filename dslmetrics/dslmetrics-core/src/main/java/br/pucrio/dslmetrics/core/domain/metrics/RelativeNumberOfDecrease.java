@@ -3,26 +3,21 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
-/**
- *  quantidade de alterações (ou instabilidade) de uma dada propriedade ao longo das versões dividido pelo tempo de vida da entidade
- * @author leandra
- *
- */
-public class RelativeNumberOfChange extends ChangeHistorySensitiveMetric {
+public class RelativeNumberOfDecrease extends ChangeHistorySensitiveMetric {
 
-	private static final String GENERAL_NAME = "Relative Number of Change";
-	private final String GENERAL_NICKNAME = "rnc";
-	private int numberOfChanges;
+	private static final String GENERAL_NAME = "Relative Number of Decrease";
+	private final String GENERAL_NICKNAME = "rnd";
+	private int numberOfDecrease;
 	private int timelife;
 
-	public RelativeNumberOfChange(CalculatedMetric conventionalMetric) {
+	public RelativeNumberOfDecrease(CalculatedMetric conventionalMetric) {
 		super(conventionalMetric);
 	}
 
 	@Override
 	protected void onNewEntity(Entity entity) {
 		timelife = 0;
-		numberOfChanges = 0;
+		numberOfDecrease = 0;
 	}
 
 	protected Double calculateMetricValueForOneVersion(Double firstMetricValue,
@@ -39,10 +34,10 @@ public class RelativeNumberOfChange extends ChangeHistorySensitiveMetric {
 		if (currentMetricValue == null || previousMetricValue == null)
 			return null;
 
-		if (!currentMetricValue.equals(previousMetricValue))
-			numberOfChanges++;
+		if (currentMetricValue.compareTo(previousMetricValue)< 0)
+			numberOfDecrease++;
 		
-		double returnValue = (double) numberOfChanges / (double) timelife;
+		double returnValue = (double) numberOfDecrease / (double) timelife;
 		
 		//alterei hoje: 14/04
 		timelife++;
