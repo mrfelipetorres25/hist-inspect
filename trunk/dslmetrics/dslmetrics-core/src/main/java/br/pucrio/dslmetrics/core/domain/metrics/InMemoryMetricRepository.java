@@ -176,6 +176,11 @@ public class InMemoryMetricRepository extends MetricsRepository {
             add(new RecentPercentageIncrease(calculatedMetric));
             add(new RelativeDifferenceOfOverallChange(calculatedMetric));
             add(new RelativeNumberOfChange(calculatedMetric));
+            
+            add(new RelativeNumberOfIncrease(calculatedMetric));
+            add(new RelativeNumberOfDecrease(calculatedMetric));
+            
+            add(new PreviousValue(calculatedMetric));
 		}
 		
 	}

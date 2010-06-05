@@ -2,6 +2,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * diferença entre a medida da versão atual e da versão anterior 
+ * @author leandra
+ *
+ */
 public class AbsoluteDifferenceOfRecentChange extends
 		ChangeHistorySensitiveMetric {
 

@@ -3,6 +3,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 import br.pucrio.dslmetrics.core.domain.Entity;
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * retorna o valor acumulado da variação entre as medidas entre as versões dididido pelo tempo de vida da entidade
+ * @author leandra
+ *
+ */
 public class RelativeDifferenceOfOverallChange extends
 		ChangeHistorySensitiveMetric {
 
@@ -38,13 +43,24 @@ public class RelativeDifferenceOfOverallChange extends
 	protected Double calculateMetricValueForOneVersion(Double firstMetricValue,
 			Double previousMetricValue, Double currentMetricValue) {
 
-		timelife++;
+		//timelife++;
+		
+		if (timelife == 0){
+			timelife++;
+			return null;
+		}
+			
 		
 		if (currentMetricValue == null || previousMetricValue == null)
 			return null;
 		
 		Double diff = currentMetricValue - previousMetricValue;
 		accumulatedValue += Math.abs(diff);
-		return accumulatedValue / (double)timelife;
+		
+		double returnValue = accumulatedValue / (double)timelife;
+		
+		timelife++;
+		
+		return returnValue;
 	}
 }

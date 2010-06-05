@@ -2,6 +2,11 @@ package br.pucrio.dslmetrics.core.domain.metrics;
 
 import br.pucrio.dslmetrics.core.mtbl.CalculatedMetric;
 
+/**
+ * aumento percentual de uma dada medida, comparada ao seu valor na versão inicial da entidade
+ * @author leandra
+ *
+ */
 public class GeneralPercentageIncrease extends ChangeHistorySensitiveMetric {
 
 	private static final String GENERAL_NAME = "General Percentage Increase";
