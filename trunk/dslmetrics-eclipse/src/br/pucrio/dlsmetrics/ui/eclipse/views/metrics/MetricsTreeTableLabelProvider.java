@@ -89,7 +89,9 @@ public class MetricsTreeTableLabelProvider extends LabelProvider implements
 		else {
 			Metric metric = ((Metric)column.getData());
 			Project project = (Project) viewer.getInput();
-			return project.getMetricValue(version, metric).toString();
+			if (project.getMetricValue(version, metric)!=null)
+				return project.getMetricValue(version, metric).toString();
+			return "";
 		}
 	}
 }
