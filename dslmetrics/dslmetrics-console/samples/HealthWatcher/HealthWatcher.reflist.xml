@@ -79,25 +79,101 @@
 	</anomaly>
 	
 	<anomaly id="DC">
-		<version number="1"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="1"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="2"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="2"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="3"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="3"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="4"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="4"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+
+		<version number="5"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="5"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="6"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="6"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="7"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="7"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="8"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="8"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="9"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="9"> <entity>healthwatcher.model.address.Address</entity> </version>
+		<version number="10"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
-		<version number="10"> <entity>healthwatcher.model.address.Address</entity> </version>
+	</anomaly>
+	
+	<anomaly id="SS">
+		<version number="1"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="2"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="3"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="4"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+
+		<version number="5"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="6"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="7"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="8"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="9"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="10"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+	</anomaly>
+	
+	<anomaly id="FE">
+		<version number="1"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="2"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="3"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="4"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+
+		<version number="5"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="6"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="7"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="8"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="9"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
+		
+		<version number="10"> <entity>healthwatcher.model.address.Address</entity> 
+		</version>
 		
 	</anomaly>
 </reference-list-catalog>

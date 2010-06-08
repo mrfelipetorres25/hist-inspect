@@ -3,4 +3,5 @@
 	<anomaly id="GC" name="God Class" applyTo="class" />
 	<anomaly id="DC" name="Divergent Change" applyTo="class" />
 	<anomaly id="FE" name="Feature Envy" applyTo="method" />
+	<anomaly id="SS" name="Shotgun Surgery" applyTo="class" />
 </anomaly-catalog>

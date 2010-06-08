@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rule-catalog>
 
+	<rule id="SS_MARINEDCU2002" name="SS-(MARINESCU2002)" anomaly="SS" expression="CM > 10 &amp;&amp; ChC > 5"/>
+	<rule id="SS_MARINEDCU2006" name="SS-(MARINESCU2006)" anomaly="SS" expression="CM > 7 &amp;&amp; ChC > 7"/>
+	
+	<rule id="FE_MARINEDCU2002" name="SS-(MARINESCU2002)" anomaly="FE" expression="AID > 4 &amp;&amp; ALD &lt; 3  &amp;&amp; NIC &lt; 3"/>
+
 <!-- Estratégias Puras Sensíveis à História DC -->
+<!-- 
 	<rule id="DC_MARA_2010SH1" name="DC-SH1 (MARA 2010)" anomaly="DC" expression="DD > 6"/> 
 	
 	<rule id="DC_MARA_2010SH2" name="DC-SH2 (MARA 2010)" anomaly="DC" expression="NOED > 11"/>
@@ -11,10 +17,10 @@
 	<rule id="DC_MARA_2010SH5" name="DC-SH5 (MARA 2010)" anomaly="DC" expression="DD > 6 || rniNOED > 0.5"/>
 	
 	<rule id="DC_MARA_2010SH6" name="DC-SH6 (MARA 2010)" anomaly="DC" expression="DD > 6 || rniDD > 0.5"/>
-	
+ -->	
 	<!-- não é boa
 	<rule id="DC_MARA_2010SH7" name="DC-SH7 (MARA 2010)" anomaly="DC" expression="DD > 7 &amp;&amp; NOED >12"/>
-	 -->
+	 
 	<rule id="DC_MARA_2010SH10" name="DC-SH10 (MARA 2010)" anomaly="DC" expression="rniDD >= 0.5"/>
 	<rule id="DC_MARA_2010SH11" name="DC-SH11 (MARA 2010)" anomaly="DC" expression="DD > 7 || NOED >12 || rniNOED > 0.5"/>
 	
@@ -23,7 +29,7 @@
 	
 	 <rule id="DC_MARA_2010SH20" name="DC-SH20 (MARA 2010)" anomaly="DC" expression="DD > 4 &amp;&amp; NOED > 12"/>
 	 <rule id="DC_MARA_2010SH21" name="DC-SH21 (MARA 2010)" anomaly="DC" expression="DD >= 5 &amp;&amp; NOED > 12 &amp;&amp; (rniLOC >= 0.33 || TL == 0.0)"/>
-	 
+-->	 
 	 	
 	<!-- 
 	<rule id="DC_MARA_2010SH8" name="DC-SH78(MARA 2010)" anomaly="DC" expression="DD > 7 &amp;&amp; NOED > 12"/>
