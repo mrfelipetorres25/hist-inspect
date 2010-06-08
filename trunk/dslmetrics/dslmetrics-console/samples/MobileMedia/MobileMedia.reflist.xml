@@ -82,4 +82,70 @@
 			</entity>
 		</version>
 	</anomaly>
+	<anomaly id="FE">
+			<version number="2">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.resetImageData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.showImageList(java.lang.String)</entity>
+		</version>
+		<version number="3">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.resetImageData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.showImageList(java.lang.String,boolean)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.handleCommand(javax.microedition.lcdui.Command,javax.microedition.lcdui.Displayable)</entity>
+		</version>
+		<version number="4">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.resetImageData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.showImageList(java.lang.String,boolean,boolean)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.handleCommand(javax.microedition.lcdui.Command,javax.microedition.lcdui.Displayable)</entity>
+		</version>
+		<version number="5">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.resetImageData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.showImageList(java.lang.String,boolean,boolean)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.handleCommand(javax.microedition.lcdui.Command)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.exchange(ubc.midp.mobilephoto.core.ui.datamodel.ImageData[],int,int)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.bubbleSort(ubc.midp.mobilephoto.core.ui.datamodel.ImageData[])</entity>
+		</version>
+		<version number="6">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.resetImageData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.showImageList(java.lang.String,boolean,boolean)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.handleCommand(javax.microedition.lcdui.Command)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.exchange(ubc.midp.mobilephoto.core.ui.datamodel.ImageData[],int,int)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController.bubbleSort(ubc.midp.mobilephoto.core.ui.datamodel.ImageData[])</entity>
+		</version>
+		<version number="7">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController.init(ubc.midp.mobilephoto.core.ui.datamodel.AlbumData)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.AlbumController.resetMediaData()</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.MediaListController.showMediaList(java.lang.String,boolean,boolean)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.MediaListController.handleCommand(javax.microedition.lcdui.Command)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.MediaListController.exchange(ubc.midp.mobilephoto.core.ui.datamodel.MediaData[],int,int)</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.MediaListController.bubbleSort(ubc.midp.mobilephoto.core.ui.datamodel.MediaData[])</entity>
+		</version>
+	</anomaly>
+	<anomaly id="SS">
+	<!--
+		<version number="2">
+		</version>
+		<version number="3">
+		</version>
+		<version number="4">
+		</version>
+	-->
+		<version number="5">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ControllerInterface</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton</entity>
+		</version>
+		<version number="6">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ControllerInterface</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton</entity>
+		</version>
+		<version number="7">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ControllerInterface</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.ScreenSingleton</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.MediaAccessor</entity>
+		</version>
+	</anomaly>
 </reference-list-catalog>
