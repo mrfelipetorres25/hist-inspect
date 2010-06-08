@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<versions>
+	<version number="1" name="Health Watcher v. 1" ref="HealthWatcher_v01.mtbl" />
+	<version number="2" name="Health Watcher v. 2" ref="HealthWatcher_v02.mtbl" />
+	<version number="3" name="Health Watcher v. 3" ref="HealthWatcher_v03.mtbl" />
+	<version number="4" name="Health Watcher v. 4" ref="HealthWatcher_v04.mtbl"  />
+	<version number="5" name="Health Watcher v. 5" ref="HealthWatcher_v05.mtbl" />
+	<version number="6" name="Health Watcher v. 6" ref="HealthWatcher_v06.mtbl" />
+	<version number="7" name="Health Watcher v. 7" ref="HealthWatcher_v07.mtbl" />
+	<version number="8" name="Health Watcher v. 8" ref="HealthWatcher_v08.mtbl" />
+	<version number="9" name="Health Watcher v. 9" ref="HealthWatcher_v09.mtbl" />
+	<version number="10" name="Health Watcher v. 10" ref="HealthWatcher_v10.mtbl" />
+</versions>
