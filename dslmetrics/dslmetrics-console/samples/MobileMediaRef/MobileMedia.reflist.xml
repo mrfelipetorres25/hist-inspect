@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference-list-catalog>
+	<anomaly id="GC">
+		<!--
+			<version number="1">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController
+			</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			</version>
+		-->
+		<version number="2">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="3">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController
+			</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="4">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController
+			</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="5">
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="6">
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
+		</version>
+		<version number="7">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+	</anomaly>
+	<anomaly id="DC">
+		<!--
+			<version number="1">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController
+			</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			</version>
+		-->
+		<version number="2">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="3">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="4">
+			<entity>ubc.midp.mobilephoto.core.ui.controller.BaseController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+		</version>
+		<version number="5">
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController</entity>
+		</version>
+		<version number="6">
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController</entity>
+		</version>
+		<version number="7">
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageMediaAccessor</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoController</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.datamodel.ImageAccessor</entity>
+			<entity>ubc.midp.mobilephoto.core.ui.controller.PhotoListController</entity>
+		</version>
+	</anomaly>
+</reference-list-catalog>
