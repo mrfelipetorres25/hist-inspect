@@ -3,7 +3,7 @@
 				<!-- being sidebar content -->
 						
 				<div class="sidebar-box">
-					<h4>Rules</h4>
+					<h4>Estratégias</h4>
 					<ul>
 						#foreach($detection in $report.Detections)
 						<li><a href="precAndRec-${detection.Rule.Id}.html" title="$detection.Rule.Name">$detection.Rule.Name</a></li>
