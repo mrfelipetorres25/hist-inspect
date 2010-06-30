@@ -1,0 +1,15 @@
+#summary Visão Geral da Arquitetura e do Funcionamento relativo ao requisito de detecção de anomalias.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCq1VYRVhHI/AAAAAAAAASk/m74P-fFYLdM/processo-histinspect.png]
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
