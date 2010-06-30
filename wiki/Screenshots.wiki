@@ -16,9 +16,11 @@ Ao se pensar em análise sensível à história, faz-se necessário a observaç�
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png]
 
 === Suporte a Métricas Sensíveis à História ===
+Métricas sensíveis à história (SHs) consideram a avaliação das características dos módulos ao longo do seu histórico de evolução. Em sua grande maioria elas medem a evolução de métricas convencionais como as de complexidade, coesão, dentre outras. A implementação dessas métricas foi motivada pela necessidade de viabilizar a criação e aplicação de estratégias de detecção sensíveis à história. Através do cálculo dessas métricas é possível obter informações como: a quatidade de vezes que um dado módulo sofreu aumento de linhas de código ao longo de sua história (rniLOC), a variação média de linhas de código em cada versão (rdocLOC), o aumento percentual da complexidade de um módulo em relação a sua versão anterior (rpiWMC), e assim por diante. Todas foram originalmente propostas no contexto dessa pesquisa e disponibilizadas pela Hist-Inspect.
 
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png]
 
 === Suporte a Detecção de Anomalias através de Estratégias de Detecção ===
+Uma estratégia de detecção é uma condição lógica composta por métricas e respectivos valores limites que detecta elementos com anomalias de modularidade (ou,  _code smells_). Seu grande benefício é que o desenvolvedor pode localizar diretamente classes e métodos afetados por uma dada anomalia, em vez de ter que inferir o problema a partir de um extenso conjunto de valores anormais de métricas. Um requisito fundamental para pesquisas relacionadas a tal mecanismo, é o suporte adequado de ferramentas que automatizem tais estratégias. A Hist-Inpect automatiza a especificação e aplicação tanto de estratégias convencionais quanto de estratégias sensíveis à história.
 
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png]
