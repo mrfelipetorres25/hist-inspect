@@ -9,6 +9,10 @@
 ===Apresentação de métricas Sensíveis à História===
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] 
 
+*Auto-Complete na Solicitação de Apresentação das Métricas* 
+[http://lh4.ggpht.com/_P1kXrtn0WgE/TCp_mIbJapI/AAAAAAAAAQ4/LfSzHUW18ZU/s800/AutoCompleteMetricView.png]
+
+*Hide-Show das Métricas Solicitadas* 
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_mDT6lCI/AAAAAAAAAQ8/mFOQe6NzAmc/s800/HideAndShowMetric.png]
 
 ===Exemplo de Catálogo XML de Anomalias===
