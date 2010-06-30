@@ -9,6 +9,8 @@
 ===Apresentação de métricas Sensíveis à História===
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] 
 
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_mDT6lCI/AAAAAAAAAQ8/mFOQe6NzAmc/s800/HideAndShowMetric.png]
+
 ===Exemplo de Catálogo XML de Anomalias===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_ccHGKXI/AAAAAAAAAQs/SVfzH3rCquI/AnomaliesXML.png] 
 
