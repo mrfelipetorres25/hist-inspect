@@ -3,6 +3,8 @@
 ===Apresentação de Gráficos de Evolução===
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png] 
 
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_mw8rZuI/AAAAAAAAARE/W76eBcKDte8/s800/HistInspect2Grafico.png]
+
 ===Detecções de Anomalias através de Estratégias de Detecção===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png] 
 
