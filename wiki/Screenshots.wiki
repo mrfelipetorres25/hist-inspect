@@ -22,6 +22,10 @@
 ===Exemplo de Catálogo XML de Anomalias===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_ccHGKXI/AAAAAAAAAQs/SVfzH3rCquI/AnomaliesXML.png] 
 
-
 ===Exemplo de Catálogo XML de Estratégias===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_zI_L_6I/AAAAAAAAARg/J4SXFjYUN-s/Rules.XML.png]
+
+=== Outras Telas ===
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_tmygd_I/AAAAAAAAARM/1hQiEnx5Kdc/OpenMetricsView.png]
+
+[http://lh4.ggpht.com/_P1kXrtn0WgE/TCp_t4KasqI/AAAAAAAAARQ/HSI9c3uDQP8/OpenPerspectiveHistInspect.png]
