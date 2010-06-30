@@ -19,7 +19,6 @@ Ao se pensar em análise sensível à história, faz-se necessário a observaç�
 
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png]
 
-=== Resultados de detecção de anomalias ===
+=== Suporte a Detecção de Anomalias através de Estratégias de Detecção ===
 
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png]
-
