@@ -9,9 +9,9 @@
 ===Apresentação de métricas Sensíveis à História===
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] 
 
-===Exemplo de Catálogo de Anomalias===
+===Exemplo de Catálogo XML de Anomalias===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_ccHGKXI/AAAAAAAAAQs/SVfzH3rCquI/AnomaliesXML.png] 
 
 
-===Exemplo de Catálogo de Estratégias===
+===Exemplo de Catálogo XML de Estratégias===
 [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_zI_L_6I/AAAAAAAAARg/J4SXFjYUN-s/Rules.XML.png]
