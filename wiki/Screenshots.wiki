@@ -1,4 +1,4 @@
-#summary Telas da ferramenta Hist-Inspect e de exemplos de arquivos de configuração de anomalias e de estratégias.
+#summary Fotos da ferramenta Hist-Inspect e de exemplos de arquivos de configuração de anomalias e de estratégias.
 
 ===Apresentação de Gráficos de Evolução===
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png] 
