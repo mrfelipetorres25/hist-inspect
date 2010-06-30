@@ -19,6 +19,8 @@
 
 *Apresentação das Métricas* 
 
+[http://lh6.ggpht.com/_P1kXrtn0WgE/TCqwG8Js8xI/AAAAAAAAASg/R_d07mfj_PY/s720/metricaSHSabado.png]
+
 [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] 
 
 ===Exemplo de Catálogo XML de Anomalias===
