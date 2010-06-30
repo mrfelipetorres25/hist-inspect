@@ -1,3 +1,17 @@
-#summary Algumas telas da ferramenta Hist-Inspect.
+#summary Telas da ferramenta Hist-Inspect e de exemplos de arquivos de configuração de anomalias e de estratégias.
 
-[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png] [http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] [http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png]
+===Apresentação de Gráficos de Evolução===
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png] 
+
+===Detecções de Anomalias através de Estratégias de Detecção===
+[http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png] 
+
+===Apresentação de métricas Sensíveis à História===
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png] 
+
+===Exemplo de Catálogo de Anomalias===
+[http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_ccHGKXI/AAAAAAAAAQs/SVfzH3rCquI/AnomaliesXML.png] 
+
+
+===Exemplo de Catálogo de Estratégias===
+[http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_zI_L_6I/AAAAAAAAARg/J4SXFjYUN-s/Rules.XML.png]
