@@ -1,0 +1,25 @@
+#summary Algumas telas da ferramenta Hist-Inspect.
+
+= Introdução =
+
+Essa página apresenta a ferramenta Hist-Inspect que, além de suportar a apresentação de gráficos de evolução e de métricas sensíveis à história, como principal contribuição possibilita a especificação de diferentes estratégias de detecção através de uma linguagem específica de domínio (DSL). Tal flexibilidade atende necessidades de dois grupos de usuários: desenvolvedores interessados em ajustar valores limites ou
+combinação de métricas para a detecção de anomalias; e pesquisadores interessados na
+avaliação e comparação da eficácia de diferentes estratégias, sejam elas convencionais ou
+sensíveis à história. 
+
+
+= Detalhes =
+
+=== Suporte a Gráficos de Evolução ===
+Ao se pensar em análise sensível à história, faz-se necessário a observação de dados históricos que revelam o comportamento evolutivo do sistema durante seu ciclo de vida. Por meio de gráficos, o avaliador pode perceber a estabilidade, o crescimento ou decrescimento de uma dada propriedade (por exemplo, linhas de código), sem ter que exatamente recuperar o valor dessa propriedade em cada versão do módulo avaliado. Além disso, torna-se interessante poder visualizar o comportamento de mais de uma métrica ao longo da história de um módulo, possiblitando, inclusive, a descoberta de padrões de influência que uma propriedade teve sobre a outra. A ferramenta proposta disponibiliza tal funcionalidade e para implementá-la foi utilizada a biblioteca gráfica JFreeChart.
+
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_cBOCO-I/AAAAAAAAAQo/awBq6is3jr8/s720/GraficoFinal.png]
+
+=== Suporte a Métricas Sensíveis à História ===
+
+[http://lh5.ggpht.com/_P1kXrtn0WgE/TCp_m25bBSI/AAAAAAAAARI/fUWlDomi9Ao/MetricasSH.png]
+
+=== Resultados de detecção de anomalias ===
+
+[http://lh6.ggpht.com/_P1kXrtn0WgE/TCp_uPvfX-I/AAAAAAAAARc/qRNPe1qdBY0/s640/RelatorioDeteccoesNoFirefox.png]
+
